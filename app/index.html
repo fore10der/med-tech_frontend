@@ -2,52 +2,386 @@
 <html lang="ru">
 
 <head>
-
 	<meta charset="utf-8">
-
 	<title>Title</title>
 	<meta name="description" content="">
-
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
 	<meta property="og:image" content="path/to/image.jpg">
 	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-
-	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#000">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#000">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+	<link rel="stylesheet" href="css/nouislider.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
-
+	<link rel="stylesheet" href="">
 </head>
-
 <body>
-
 	<div class="container">
-
-		<div class="row">
-
-			<div class="col-sm-8 col-sm-offset-2">
-				
-				<img class="img-responsive" src="img/preview.jpg" alt="Start HTML5 Template">
-				<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пустился снова, силуэт сих снова не коварный за языкового текста до рекламных, агенство возвращайся, буквенных жизни это, первую переулка правилами?</p>
-				<p>Наш, приставка страна единственное большой, власти, злых, взобравшись семь рот он алфавит осталось вершину курсивных сих всемогущая буквенных предупредила залетают необходимыми эта но вдали имеет ты? Предупреждал повстречался, но которое!</p>
-				<p>Злых, знаках свою. Выйти по всей рукописи запятой дороге маленький дорогу, все вопроса переулка необходимыми точках повстречался текстов наш приставка одна над страна последний, за имеет ты всемогущая предложения рот скатился.</p>
-
+		<header class="header">
+			<div class="row">
+				<div class="col-md-4 col-8">
+					<img src="img/icons/logo.svg" class="header-logo" alt="">
+				</div>
+				<div class="header__search col-md-4">
+					<input class="header__search-input" placeholder="Искать..." type="text">
+					<input class="header__search-button" type="image" src="img/icons/search.svg">
+				</div>
+				<div class="col-md-2 col-4">
+					<div class="header__lang-switcher">
+						<a href="#" class="header__lang-switch header-img header-img_ru"></a>
+						<a href="#" class="header__lang-switch header-img header-img_en"></a>
+						<a href="#" class="header__lang-switch header-img header-img_ita"></a>
+					</div>
+				</div>
+				<div class="header__client-account col-md-2" >
+						<a href="#" class="header__client header-img header-img_profile"></a>
+						<a href="#" class="header__client header-img header-img_settings"></a>
+					<div class="header__cart">
+						<a href="#" class="header__cart-icon header-img header-img_cart"></a>
+						<div class="header__cart-score_wrapper">
+	      <div class="header__cart-score">03</div>
+	     </div>
+				</div>
+				</div>
 			</div>
-			
-		</div>
+		</header>
 
+		<div class="hr"></div>
+
+		<div class="nav-wrap">
+			<div class="nav__mobile">
+			<div id="nav__icon_header" class="nav__icon"></div>
+			<div class="nav__services-wrapper">
+				<ul class="nav__services">
+		   <li>
+		    <a class="nav__services-vk" href="#"></a>
+		   </li>
+		   <li>
+		    <a class="nav__services-fb" href="#"></a>
+		   </li>
+		   <li>
+		    <a class="nav__services-twitter" href="#"></a>
+		   </li>
+			   <li id="nav-header__services-search-wrap" class="nav__services-search-wrap">
+			    <a id="nav-header__services-search" class="nav__services-search" href="#">
+			    	<svg enable-background="new 0 0 32 32" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+			    		<path class="nav__services-search-icon" class="st0" d="m22.6 18.9c-0.4-0.4-0.5-1-0.3-1.5 0 0 1.5-3.2 1.5-5.6 0-6.5-5.3-11.8-11.9-11.8s-11.9 5.3-11.9 11.9 5.3 11.9 11.9 11.9c2.3 0 5.5-1.5 5.5-1.5 0.5-0.2 1.1-0.1 1.5 0.3l9.1 9.1c0.4 0.4 0.9 0.4 1.3 0l2.4-2.4c0.4-0.4 0.4-0.9 0-1.3l-9.1-9.1zm-10.7-0.6c-3.5 0-6.4-2.9-6.4-6.4s2.9-6.4 6.4-6.4 6.4 2.9 6.4 6.4c0 3.6-2.8 6.4-6.4 6.4z"/>
+			    	</svg>
+			    </a>
+			   </li>
+				</ul>
+			</div>
+			</div>
+			<nav id="nav__menu_header" class="nav header__nav">
+		   	<ul class="nav__menu">
+		    	<li>
+		     	<a href="#">Приборы</a>
+		    	</li>
+		    	<li>
+		      <a href="#">Команда</a>
+		    	</li>
+		    	<li>
+		      <a href="#">География</a>
+		    	</li>
+		    	<li>
+		      <a href="#">Партнеры</a>
+		   		</li>
+		    	<li>
+		      <a href="#">Контакты</a>
+		    	</li>
+						</ul>
+			</nav>
+		</div>
+	</div>
+	<div id="nav-header__services-search-block" class="nav__services-search-block">
+		<input class="nav__services-search-input" placeholder="Искать..." type="text">
+	</div>
+	</div>
 	</div>
 
-	<script src="js/scripts.min.js"></script>
+<!-- 	<div class="banner">
+		<div class="container">
+			<div class="row">
+			<div class="col-sm-6">
+			<div class="banner-title">
+				Миостимулятор для мышц живота Slender
+			</div>
+			<div class="banner-stick"></div>
+			<div class="banner-subtitle">
+				какой-то верхний заголовок
+			</div>
+			<p class="banner-desc">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non ligula quisorcidaus efficitur. Sed ex elit, ultrices et maximus consequat, porttitor a mauris. Interdum et malesuada
+			</p>
+			<button class="banner-ship">
+				В каталог
+			</button>
+		</div>
+		</div>
+		</div>
+	</div> -->
 
+	<div class="devices">
+		<div class="container">
+			<div class="row devices__row-header">
+				<div class="col-sm-4 devices__sort_type">
+					<a class="nav-slide nav-slide_left" href="#">
+							<svg enable-background="new 0 0 32 32" width="14" height="14" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+							<path class="nav-icon" d="m19 1.7c8.2 7.6 11.1 10.7 12 11.9 0.6 0.7 1 1.5 1 2.5 0 1.1-0.5 2.1-1.2 2.7-2.2 2.5-9.4 9.4-11.8 11.8-0.2 0.3-0.5 0.5-0.8 0.7s0 0 0 0c-0.7 0.5-1.4 0.7-2.2 0.7-2 0-3.7-1.7-3.7-3.7 0-1 0.4-2 1.1-2.6 1.3-1.5 5.8-5.9 5.8-5.9h-15.3c-2-0.1-3.6-1.7-3.6-3.7s1.6-3.7 3.7-3.7h0.2 15.2l-5.3-5.5c-0.5-0.3-0.9-0.8-1.2-1.3l-0.1-0.1c-0.3-0.5-0.4-1.1-0.4-1.7 0-2 1.6-3.6 3.7-3.6 1.1 0 2.2 0.6 2.9 1.5z" transform="scale(-1,1) translate(-32,0)" /></svg>
+					</a>
+					<div class="devices__select-wrap">
+						<select class="devices__select-wrap-select">
+							<option value="">Все приборы</option>
+						</select>
+					</div>
+				</div>
+				<div class="devices__title col-sm-4">
+					<span class="devices__title-stick"></span>
+					<span class="devices__title-content">Приборы</span>
+					<span class="devices__title-stick"></span>
+				</div>
+				<div class="col-sm-4 devices__sort_price">
+					<span class="devices__sort_price-title">Цена</span>
+					<div class="devices__sort_price-ranger"></div>
+					<a class="nav-slide nav-slide_right" href="#">
+							<svg enable-background="new 0 0 32 32" width="14" height="14" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+							<path class="nav-icon" d="m19 1.7c8.2 7.6 11.1 10.7 12 11.9 0.6 0.7 1 1.5 1 2.5 0 1.1-0.5 2.1-1.2 2.7-2.2 2.5-9.4 9.4-11.8 11.8-0.2 0.3-0.5 0.5-0.8 0.7s0 0 0 0c-0.7 0.5-1.4 0.7-2.2 0.7-2 0-3.7-1.7-3.7-3.7 0-1 0.4-2 1.1-2.6 1.3-1.5 5.8-5.9 5.8-5.9h-15.3c-2-0.1-3.6-1.7-3.6-3.7s1.6-3.7 3.7-3.7h0.2 15.2l-5.3-5.5c-0.5-0.3-0.9-0.8-1.2-1.3l-0.1-0.1c-0.3-0.5-0.4-1.1-0.4-1.7 0-2 1.6-3.6 3.7-3.6 1.1 0 2.2 0.6 2.9 1.5z" /></svg>
+					</a>
+				</div>
+			</div>
+			</div>
+			<div class="container">
+				<div class="row devices__products-row">
+					<div class="col-md-3">
+						<div class="devices__product">
+							<div class="devices__product-preview" style="background-image: url('img/products/1.png')">
+								<button class="devices__product-buy">
+									<svg enable-background="new 0 0 32 32" width="30" height="25" version="1.2" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<path style="fill-rule:evenodd;clip-rule:evenodd;fill:white;" d="m31.9 9.7h-23.4v-2.2s0-2.1-2.1-2.1h-5.3s-1.1 0-1.1 1.1v1.1l1.1 1.1h4.3l4.3 14.9 1.1 1.1h1.1l1.1-1.1h13.8s2.7-2.9 4.3-8.5c1.3-5.8 0.8-5.4 0.8-5.4zm-19.7 14.9c-2.1 0-3.7 1.7-3.7 3.7 0 2.1 1.7 3.7 3.7 3.7 2.1 0 3.7-1.7 3.7-3.7 0.1-2.1-1.6-3.7-3.7-3.7zm0 5.3c-0.9 0-1.6-0.7-1.6-1.6s0.7-1.6 1.6-1.6 1.6 0.7 1.6 1.6-0.7 1.6-1.6 1.6zm14.9-5.3c-2.1 0-3.7 1.7-3.7 3.7 0 2.1 1.7 3.7 3.7 3.7 2.1 0 3.7-1.7 3.7-3.7 0.1-2.1-1.6-3.7-3.7-3.7zm0 5.3c-0.9 0-1.6-0.7-1.6-1.6s0.7-1.6 1.6-1.6 1.6 0.7 1.6 1.6-0.7 1.6-1.6 1.6zm-11.1-2.2v2.1h7.4v-2.1h-7.4z"/>
+									</svg>
+								</button>
+							</div>
+							<div class="devices__product-title">Миостимулятор электронный RestArt M-18</div>
+							<div class="devices__product-price">987</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="devices__product">
+							<div class="devices__product-preview" style="background-image: url('img/products/1.png')">
+								<button class="devices__product-buy">
+									<svg enable-background="new 0 0 32 32" width="30" height="25" version="1.2" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<path style="fill-rule:evenodd;clip-rule:evenodd;fill:white;" d="m31.9 9.7h-23.4v-2.2s0-2.1-2.1-2.1h-5.3s-1.1 0-1.1 1.1v1.1l1.1 1.1h4.3l4.3 14.9 1.1 1.1h1.1l1.1-1.1h13.8s2.7-2.9 4.3-8.5c1.3-5.8 0.8-5.4 0.8-5.4zm-19.7 14.9c-2.1 0-3.7 1.7-3.7 3.7 0 2.1 1.7 3.7 3.7 3.7 2.1 0 3.7-1.7 3.7-3.7 0.1-2.1-1.6-3.7-3.7-3.7zm0 5.3c-0.9 0-1.6-0.7-1.6-1.6s0.7-1.6 1.6-1.6 1.6 0.7 1.6 1.6-0.7 1.6-1.6 1.6zm14.9-5.3c-2.1 0-3.7 1.7-3.7 3.7 0 2.1 1.7 3.7 3.7 3.7 2.1 0 3.7-1.7 3.7-3.7 0.1-2.1-1.6-3.7-3.7-3.7zm0 5.3c-0.9 0-1.6-0.7-1.6-1.6s0.7-1.6 1.6-1.6 1.6 0.7 1.6 1.6-0.7 1.6-1.6 1.6zm-11.1-2.2v2.1h7.4v-2.1h-7.4z"/>
+									</svg>
+								</button>
+							</div>
+							<div class="devices__product-title">Миостимулятор электронный RestArt M-18</div>
+							<div class="devices__product-price">987</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="devices__product">
+							<div class="devices__product-preview" style="background-image: url('img/products/1.png')">
+								<button class="devices__product-buy">
+									<svg enable-background="new 0 0 32 32" width="30" height="25" version="1.2" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<path style="fill-rule:evenodd;clip-rule:evenodd;fill:white;" d="m31.9 9.7h-23.4v-2.2s0-2.1-2.1-2.1h-5.3s-1.1 0-1.1 1.1v1.1l1.1 1.1h4.3l4.3 14.9 1.1 1.1h1.1l1.1-1.1h13.8s2.7-2.9 4.3-8.5c1.3-5.8 0.8-5.4 0.8-5.4zm-19.7 14.9c-2.1 0-3.7 1.7-3.7 3.7 0 2.1 1.7 3.7 3.7 3.7 2.1 0 3.7-1.7 3.7-3.7 0.1-2.1-1.6-3.7-3.7-3.7zm0 5.3c-0.9 0-1.6-0.7-1.6-1.6s0.7-1.6 1.6-1.6 1.6 0.7 1.6 1.6-0.7 1.6-1.6 1.6zm14.9-5.3c-2.1 0-3.7 1.7-3.7 3.7 0 2.1 1.7 3.7 3.7 3.7 2.1 0 3.7-1.7 3.7-3.7 0.1-2.1-1.6-3.7-3.7-3.7zm0 5.3c-0.9 0-1.6-0.7-1.6-1.6s0.7-1.6 1.6-1.6 1.6 0.7 1.6 1.6-0.7 1.6-1.6 1.6zm-11.1-2.2v2.1h7.4v-2.1h-7.4z"/>
+									</svg>
+								</button>
+							</div>
+							<div class="devices__product-title">Миостимулятор электронный RestArt M-18</div>
+							<div class="devices__product-price">987</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="devices__product">
+							<div class="devices__product-preview" style="background-image: url('img/products/1.png')">
+								<button class="devices__product-buy">
+									<svg enable-background="new 0 0 32 32" width="30" height="25" version="1.2" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<path style="fill-rule:evenodd;clip-rule:evenodd;fill:white;" d="m31.9 9.7h-23.4v-2.2s0-2.1-2.1-2.1h-5.3s-1.1 0-1.1 1.1v1.1l1.1 1.1h4.3l4.3 14.9 1.1 1.1h1.1l1.1-1.1h13.8s2.7-2.9 4.3-8.5c1.3-5.8 0.8-5.4 0.8-5.4zm-19.7 14.9c-2.1 0-3.7 1.7-3.7 3.7 0 2.1 1.7 3.7 3.7 3.7 2.1 0 3.7-1.7 3.7-3.7 0.1-2.1-1.6-3.7-3.7-3.7zm0 5.3c-0.9 0-1.6-0.7-1.6-1.6s0.7-1.6 1.6-1.6 1.6 0.7 1.6 1.6-0.7 1.6-1.6 1.6zm14.9-5.3c-2.1 0-3.7 1.7-3.7 3.7 0 2.1 1.7 3.7 3.7 3.7 2.1 0 3.7-1.7 3.7-3.7 0.1-2.1-1.6-3.7-3.7-3.7zm0 5.3c-0.9 0-1.6-0.7-1.6-1.6s0.7-1.6 1.6-1.6 1.6 0.7 1.6 1.6-0.7 1.6-1.6 1.6zm-11.1-2.2v2.1h7.4v-2.1h-7.4z"/>
+									</svg>
+								</button>
+							</div>
+							<div class="devices__product-title">Миостимулятор электронный RestArt M-18</div>
+							<div class="devices__product-price">987</div>
+						</div>
+					</div>
+				</div>
+				<div class="row devices__products-row">
+				</div>
+			</div>
+	</div>
+
+	<div class="geography">
+		<div class="container">
+			<div class="geography__content">
+				<div class="geography__content-stick"></div>
+				<div class="geography__content-title">География</div>
+				<div class="geography__content-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non ligula quisorcidaus efficitur. Sed ex elit, ultrices et maximus consequat, porttitor a mauris. Interdum et malesuada</div>
+			</div>
+			<div class="geography__map">
+							<div class="geography__map-point geography__map-point_size_big geography__map-point_city_moscow"></div>
+			</div>
+		</div>	
+	</div>
+
+	<div class="partners">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 partners__nav-left">
+					<a class="nav-slide nav-slide_left" href="#">
+							<svg enable-background="new 0 0 32 32" width="14" height="14" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+							<path class="nav-icon" d="m19 1.7c8.2 7.6 11.1 10.7 12 11.9 0.6 0.7 1 1.5 1 2.5 0 1.1-0.5 2.1-1.2 2.7-2.2 2.5-9.4 9.4-11.8 11.8-0.2 0.3-0.5 0.5-0.8 0.7s0 0 0 0c-0.7 0.5-1.4 0.7-2.2 0.7-2 0-3.7-1.7-3.7-3.7 0-1 0.4-2 1.1-2.6 1.3-1.5 5.8-5.9 5.8-5.9h-15.3c-2-0.1-3.6-1.7-3.6-3.7s1.6-3.7 3.7-3.7h0.2 15.2l-5.3-5.5c-0.5-0.3-0.9-0.8-1.2-1.3l-0.1-0.1c-0.3-0.5-0.4-1.1-0.4-1.7 0-2 1.6-3.6 3.7-3.6 1.1 0 2.2 0.6 2.9 1.5z" transform="scale(-1,1) translate(-32,0)" /></svg>
+					</a>
+				</div>
+				<div class="col-sm-4 partners__title">
+					<span class="partners__title-stick"></span>
+					<span class="partners__title-content">Партнеры</span>
+					<span class="partners__title-stick"></span>
+				</div>
+				<div class="col-sm-4 devices__sort_price">
+					<a class="nav-slide partners__nav-right" href="#">
+							<svg enable-background="new 0 0 32 32" width="14" height="14" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+							<path class="nav-icon" d="m19 1.7c8.2 7.6 11.1 10.7 12 11.9 0.6 0.7 1 1.5 1 2.5 0 1.1-0.5 2.1-1.2 2.7-2.2 2.5-9.4 9.4-11.8 11.8-0.2 0.3-0.5 0.5-0.8 0.7s0 0 0 0c-0.7 0.5-1.4 0.7-2.2 0.7-2 0-3.7-1.7-3.7-3.7 0-1 0.4-2 1.1-2.6 1.3-1.5 5.8-5.9 5.8-5.9h-15.3c-2-0.1-3.6-1.7-3.6-3.7s1.6-3.7 3.7-3.7h0.2 15.2l-5.3-5.5c-0.5-0.3-0.9-0.8-1.2-1.3l-0.1-0.1c-0.3-0.5-0.4-1.1-0.4-1.7 0-2 1.6-3.6 3.7-3.6 1.1 0 2.2 0.6 2.9 1.5z" /></svg>
+					</a>
+				</div>
+		</div>
+				<div class="row partners__row">
+					<div class="col-sm-3">
+						<div class="partners-partner" style="background-image: url('img/partners/1.png')"></div>
+					</div>
+					<div class="col-sm-3">
+						<div class="partners-partner" style="background-image: url('img/partners/2.png')"></div>
+					</div>
+					<div class="col-sm-3">
+						<div class="partners-partner" style="background-image: url('img/partners/3.png')"></div>
+					</div>
+					<div class="col-sm-3">
+						<div class="partners-partner" style="background-image: url('img/partners/4.png')"></div>
+					</div>
+				</div>
+				<div class="row partners__row">
+					<div class="col-sm-3">
+						<div class="partners-partner" style="background-image: url('img/partners/1.png')"></div>
+					</div>
+					<div class="col-sm-3">
+						<div class="partners-partner" style="background-image: url('img/partners/2.png')"></div>
+					</div>
+					<div class="col-sm-3">
+						<div class="partners-partner" style="background-image: url('img/partners/3.png')"></div>
+					</div>
+					<div class="col-sm-3">
+						<div class="partners-partner" style="background-image: url('img/partners/4.png')"></div>
+					</div>
+				</div>
+	</div>
+	</div>
+
+
+	<div class="contacts">
+		<div class="container">
+			<div class="contacts-title">
+				<span class="contacts-title__stick"></span>
+				<span class="contacts-title__content">Контакты</span>
+				<span class="contacts-title__stick"></span>
+			</div>
+			<div class="row contacts__form">
+				<div class="col-sm-3 contacts__input-wrap">
+					<input id="contacts-name" placeholder="Ваше имя" type="text">
+				</div>
+				<div class="col-sm-3 contacts__input-wrap">
+					<input id="contact-phone" placeholder="Телефон" type="text">
+				</div>
+				<div class="col-sm-3 contacts__input-wrap">
+					<input id="contact-email" placeholder="E-mail" type="text">
+				</div>
+				<div class="col-sm-3 contacts__input-wrap">
+					<button class="contacts__form-submit">Мы свяжемся с вами</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer__content">
+		<div class="container">
+			<div class="row footer__about-row">
+				<div class="col-sm-4 footer__logo">
+					<img src="img/icons/logo.svg" alt="">
+				</div>
+				<div class="col-sm-5 footer__contacts">
+					<ul class="footer__contacts-list">
+						<li class="footer__contacts-elem footer__contacts-address"><span>Адрес</span> : 3423443 Москва, ул. Полевая, д.13, оф.14</li>
+						<li class="footer__contacts-elem footer__contacts-phone"><span>Phone</span> : +7 777 88 54</li>
+						<li class="footer__contacts-elem footer__contacts-email"><span>Email</span> : mail@medportal.ru</li>
+					</ul>
+				</div>
+				<div class="col-sm-3 footer__subscribe">
+					<div class="footer__subscribe-title">
+						Подпишитесь на рассылку
+					</div>
+					<div class="footer__subscribe-input">
+						<input placeholder="Адрес E-mail" type="text">
+					</div>
+				</div>
+			</div>
+			<div class="footer__requisites-row row">
+				<div class="col-sm-3 col-sm-offset-9">
+					<div class="footer__requisites">
+						<div class="footer__requisite">
+						</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="footer__service">
+		<div class="container">
+					<div class="col-sm-9">
+					<nav class="nav footer__nav">
+						<div class="row">
+						<div class="col-sm-10">
+	   			<ul class="nav__menu">
+	    	<li>
+	     	<a href="#">Приборы</a>
+	    	</li>
+	    	<li>
+	      <a href="#">Команда</a>
+	    	</li>
+	    	<li>
+	      <a href="#">География</a>
+	    	</li>
+	    	<li>
+	      <a href="#">Партнеры</a>
+	   		</li>
+	    	<li>
+	      <a href="#">Контакты</a>
+	    	</li>
+				</ul>
+				</div>
+				<div class="col-sm-2">
+				<ul class="nav__social footer__social">
+		   <li>
+		    <a class="nav__social-vk" href="#"></a>
+		   </li>
+		   <li>
+		    <a class="nav__social-fb" href="#"></a>
+		   </li>
+		   <li>
+		    <a class="nav__social-twitter" href="#"></a>
+		   </li>
+				</ul>
+			</div>
+			</div>
+			</nav>
+				</div>
+				<div class="col-sm-3 footer__copyright">
+					Портал медицинских приборов © 2018
+				</div>
+	</div>
+	</div>
+	</footer>
+	<script src="js/scripts.min.js"></script>
+	<script src="js/addaptive_menu.js"></script>
+	<script src="js/ranger.min.js"></script>
 </body>
 </html>

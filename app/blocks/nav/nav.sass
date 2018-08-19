@@ -1,0 +1,141 @@
+.nav
+	width: 59.5726496%
+	float: left
+	@media (max-width: 768px)
+		display: none
+		width: 100%
+	&-wrap
+		width: 100%
+		overflow: auto
+	&-slide
+		width: 40px
+		height: 40px
+		background-color: #f4f4f4
+		display: flex
+		justify-content: center
+		align-items: center
+		&:hover
+			background-color: $extraColor
+			.nav-icon
+				fill-rule: evenodd
+				clip-rule: evenodd
+				fill: white
+		&_right
+			margin-left: 19px
+		&_left
+			margin-right: 24px
+	&__menu
+		width: 100%
+		display: flex
+		justify-content: space-between
+		flex-direction: row
+		padding: 0
+		margin: 0
+		align-items: center
+		@media (max-width: 768px)
+			flex-direction: column
+			align-items: flex-start
+		li
+			padding-top: 17px
+			padding-bottom: 17px
+			float: left
+			list-style-type: none
+			@media (max-width: 768px)
+			 display: block
+				margin-left: 10px
+			a
+				text-transform: uppercase
+				font-weight: 600
+				font-size: 14px
+				color: #2f2f2f
+				text-decoration: none
+	&__mobile
+		clear: both
+	&__icon
+  display: none
+  width: 24px
+  height: 20px
+  cursor: pointer
+  background-image: url('../img/icons/hamburger.svg')
+  padding: 17px 11px
+  box-sizing: content-box
+  background-repeat: no-repeat
+  background-position: center center
+  @media (max-width: 768px)
+  	display: inline-block
+  	float: right
+  &:after
+  	@media (max-width: 768px)
+  		content: ''
+  		clear: both
+	&__services
+		padding: 0
+		margin: 0
+		display: flex
+		flex-direction: row
+		list-style-type: none
+		&-wrapper
+			display:  inline-block
+   float: right
+			@media (max-width: 768px)
+				display: inline-block
+				float: left
+		&-vk
+			background-image: url('../img/icons/vk.svg')
+		&-fb
+			background-image: url('../img/icons/facebook.svg')
+		&-twitter
+			background-image: url('../img/icons/twitter.svg')
+		&-search
+			&--opened
+				svg
+					path
+						fill: white !important
+			&-wrap
+				display: none
+				padding-left: 21px !important
+				padding-right: 21px !important
+				@media (max-width: 768px)
+					display: flex
+					justify-content: center
+					align-items: center
+				&--opened
+					background-color: $extraColor
+			&-block
+					width: 100%
+					margin: 0 auto
+					height: 50px
+					background-color: #5da29c
+					position: absolute
+					display: none
+					justify-content: center
+					align-items: center
+					&--opened
+						display: flex
+						padding: 10px 0
+			&-input
+					margin: 0 auto
+					font-size: 12px
+					box-sizing: padding-box
+					border: 1px solid $extraColor
+					border-radius: 14px
+					width: 93.75%
+					margin: 0 auto
+					padding: 8px 26px 7px 14px
+					color: #c2c2c2
+			&-icon
+					width: 18px !important
+					height: 18px !important
+					fill-rule:evenodd
+					clip-rule:evenodd
+					fill:#272525
+		li
+			width: 22px
+			height: 22px
+			padding: 17px 11px
+			box-sizing: content-box
+			a
+				display: inline-block
+				width: 100%
+				height: 100%
+				background-size: 100% 100%

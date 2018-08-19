@@ -41,7 +41,6 @@ body
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	line-height: 1.65
 	font-family: $default-font
 	overflow-x: hidden
 
@@ -57,4 +56,21 @@ body
 	background-color: $accent
 	color: #fff
 
+.hr
+	width: 100%
+	height: 1px
+	background-color: #dfdfdf
+input:active, :hover, :focus
+    outline: 0
+    outline-offset: 0
+
+@import "../blocks/header/header"
+@import "../blocks/nav/nav"
+@import "../blocks/footer/footer"
+@import "../blocks/contacts/contacts"
+@import "../blocks/banner/banner"
+@import "../blocks/devices/devices"
+@import "../blocks/noui/noui"
+@import "../blocks/geography/geography"
+@import "../blocks/partners/partners"
 @import "media" // Всегда в конце

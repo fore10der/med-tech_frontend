@@ -1,0 +1,105 @@
+.devices
+	margin-top: 60px
+	margin-bottom: 86px
+	.row-header
+		display: flex
+		align-items: center
+	&-icon
+		height: 14px
+		width: 14px
+	&__sort
+		&_type
+			display: flex
+			justify-content: flex-start
+		&_price
+			display: flex
+			justify-content: flex-end
+			align-items: center
+			&-title
+				color: #0a0a0a
+				font-family: "Open Sans"
+				font-size: 18px
+				font-weight: 600
+				margin-right: 11px
+			&-ranger
+				width: 210px
+	&__select-wrap
+		width: 230px
+		&-select
+			appearance: none
+			color: #0a0a0a
+			font-family: "Open Sans"
+			font-size: 16px
+			font-weight: 400
+			width: 100%
+			padding: 7.9px 8.95px
+			border: 1px solid #c3c3c3
+			background-color: transparent
+			background-image: url("../img/icons/select-arrow.png")
+			background-repeat: no-repeat
+			background-position: 95% center
+	&__title
+		display: flex
+		justify-content: center
+		align-items: center
+		&-stick
+			display: inline-block
+			width: 25px
+			height: 2px
+			background-color: $extraColor
+		&-content
+			margin-right: 23px
+			margin-left: 23px
+			color: #0a0a0a
+			font-size: 25px
+			font-weight: 600
+			text-transform: uppercase
+	&__products-row
+		padding-top: 30px
+	&__product
+		margin-bottom: 8px
+		height: 433px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		&-buy
+			width: 40px
+			height: 40px
+			border: none
+			background-color: $extraColor
+			padding: 8px 6px 7px 3px
+			display: none
+		&-preview
+			padding: 20px
+			width: 100%
+			height: 346px		
+			border: 1px solid #c3c3c3
+			background-repeat: no-repeat
+			background-position: center center
+			background-size: 100% auto
+			background-image: url("../img/products/2.png")
+			&:hover
+				.devices__product-buy
+					display: block
+		&-title
+			color: #2f2f2f
+			font-family: "Open Sans"
+			font-size: 16px
+			font-weight: 600
+			padding: 9px 0 0 0
+			margin-bottom: auto
+		&-price
+			display: inline-block
+			color: #5da29c
+			font-family: "Open Sans"
+			font-size: 24px
+			font-weight: 700
+			line-height: 24px
+			&:after
+				content: ''
+				height: 18px
+				width: 13px
+				background-image: url("../img/icons/ruble.svg")
+				background-size: 100% 100%
+				display: inline-block
+				margin-left: 6px

@@ -29,9 +29,9 @@ var gulp           = require('gulp'),
 
 gulp.task('common-js', function() {
 	return gulp.src([
-		'app/js/common.js',
+		'app/src_js/*.js',
 		])
-	.pipe(concat('common.min.js'))
+	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(uglify())
 	.pipe(gulp.dest('app/js'));
 });
@@ -39,7 +39,7 @@ gulp.task('common-js', function() {
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/js/common.min.js', // Всегда в конце
+		'app/libs/nouislider/distribute/nouislider.min.js'
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Минимизировать весь js (на выбор)
@@ -48,7 +48,9 @@ gulp.task('js', ['common-js'], function() {
 });
 
 gulp.task('sass', function() {
-	return gulp.src('app/sass/**/*.sass')
+	return gulp.src(['app/sass/**/*.sass',
+		'app/libs/nouislider/distribute/nouislider.css'
+		])
 	.pipe(sass({outputStyle: 'expanded'}).on("error", notify.onError()))
 	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer(['last 15 versions']))
@@ -58,8 +60,8 @@ gulp.task('sass', function() {
 });
 
 gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
-	gulp.watch('app/sass/**/*.sass', ['sass']);
-	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
+	gulp.watch(['app/sass/**/*.sass', 'app/blocks/**/*.sass'], ['sass']);
+	gulp.watch(['libs/**/*.js', 'app/src_js/*.js'], ['js']);
 	gulp.watch('app/*.html', browserSync.reload);
 });
 
@@ -122,6 +124,19 @@ gulp.task('rsync', function() {
 		compress: true
 	}));
 });
+
+gulp.task('min-css', function() {
+	return gulp.src('app/template/**/*.css')
+	.pipe(cleanCSS()) // Опционально, закомментировать при отладке
+	.pipe(gulp.dest('app/fixedtemplate/'))
+});
+
+gulp.task('min-js', function() {
+	return gulp.src('app/template/**/*.js')
+	.pipe(uglify()) // Опционально, закомментировать при отладке
+	.pipe(gulp.dest('app/fixedtemplate/'))
+});
+
 
 gulp.task('removedist', function() { return del.sync('dist'); });
 gulp.task('clearcache', function () { return cache.clearAll(); });
