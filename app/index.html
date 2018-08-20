@@ -47,11 +47,13 @@
 				</div>
 			</div>
 		</header>
-
+	</div>
+	<div class="container">
 		<div class="hr"></div>
-
+	</div>
 		<div class="nav-wrap">
 			<div class="nav__mobile">
+			<div class="container">
 			<div id="nav__icon_header" class="nav__icon"></div>
 			<div class="nav__services-wrapper">
 				<ul class="nav__services">
@@ -74,6 +76,12 @@
 				</ul>
 			</div>
 			</div>
+			<div id="nav-header__services-search-block" class="nav__services-search-block">
+				<input class="nav__services-search-input" placeholder="Искать..." type="text">
+			</div>
+			</div>
+
+			<div class="container">
 			<nav id="nav__menu_header" class="nav header__nav">
 		   	<ul class="nav__menu">
 		    	<li>
@@ -93,18 +101,16 @@
 		    	</li>
 						</ul>
 			</nav>
+			</div>
 		</div>
-	</div>
-	<div id="nav-header__services-search-block" class="nav__services-search-block">
-		<input class="nav__services-search-input" placeholder="Искать..." type="text">
 	</div>
 	</div>
 	</div>
 
-<!-- 	<div class="banner">
+	<div class="banner">
 		<div class="container">
 			<div class="row">
-			<div class="col-sm-6">
+			<div class="col-md-6 col-12">
 			<div class="banner-title">
 				Миостимулятор для мышц живота Slender
 			</div>
@@ -121,12 +127,12 @@
 		</div>
 		</div>
 		</div>
-	</div> -->
+	</div>
 
 	<div class="devices">
 		<div class="container">
-			<div class="row devices__row-header">
-				<div class="col-sm-4 devices__sort_type">
+			<div class="devices__row-header row">
+				<div class="col-md-4 order-md-0 col-8 order-1 devices__sort_type">
 					<a class="nav-slide nav-slide_left" href="#">
 							<svg enable-background="new 0 0 32 32" width="14" height="14" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
 							<path class="nav-icon" d="m19 1.7c8.2 7.6 11.1 10.7 12 11.9 0.6 0.7 1 1.5 1 2.5 0 1.1-0.5 2.1-1.2 2.7-2.2 2.5-9.4 9.4-11.8 11.8-0.2 0.3-0.5 0.5-0.8 0.7s0 0 0 0c-0.7 0.5-1.4 0.7-2.2 0.7-2 0-3.7-1.7-3.7-3.7 0-1 0.4-2 1.1-2.6 1.3-1.5 5.8-5.9 5.8-5.9h-15.3c-2-0.1-3.6-1.7-3.6-3.7s1.6-3.7 3.7-3.7h0.2 15.2l-5.3-5.5c-0.5-0.3-0.9-0.8-1.2-1.3l-0.1-0.1c-0.3-0.5-0.4-1.1-0.4-1.7 0-2 1.6-3.6 3.7-3.6 1.1 0 2.2 0.6 2.9 1.5z" transform="scale(-1,1) translate(-32,0)" /></svg>
@@ -137,14 +143,19 @@
 						</select>
 					</div>
 				</div>
-				<div class="devices__title col-sm-4">
+				<div class="devices__title col-md-4 order-md-1 col-12 order-0">
 					<span class="devices__title-stick"></span>
 					<span class="devices__title-content">Приборы</span>
 					<span class="devices__title-stick"></span>
 				</div>
-				<div class="col-sm-4 devices__sort_price">
-					<span class="devices__sort_price-title">Цена</span>
-					<div class="devices__sort_price-ranger"></div>
+				<div class="col-md-4 order-md-2 col-4 order-2 devices__sort_price">
+					<a id="nav-slide_mob-filter" class="nav-slide_mob-filter" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="13" viewBox="0 0 13 13"><defs><path id="o6saa" d="M220 561h13l-4.33 6.5-.87 6.5h-2.6l-.87-6.5z"/></defs><g><g transform="translate(-220 -561)"><use fill="#120001" xlink:href="#o6saa"/></g></g></svg>
+					</a>
+					<div id="devices__sort_price-wrapper" class="devices__sort_price-wrapper">
+						<span class="devices__sort_price-title">Цена</span>
+						<div class="devices__sort_price-ranger"></div>
+					</div>
 					<a class="nav-slide nav-slide_right" href="#">
 							<svg enable-background="new 0 0 32 32" width="14" height="14" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
 							<path class="nav-icon" d="m19 1.7c8.2 7.6 11.1 10.7 12 11.9 0.6 0.7 1 1.5 1 2.5 0 1.1-0.5 2.1-1.2 2.7-2.2 2.5-9.4 9.4-11.8 11.8-0.2 0.3-0.5 0.5-0.8 0.7s0 0 0 0c-0.7 0.5-1.4 0.7-2.2 0.7-2 0-3.7-1.7-3.7-3.7 0-1 0.4-2 1.1-2.6 1.3-1.5 5.8-5.9 5.8-5.9h-15.3c-2-0.1-3.6-1.7-3.6-3.7s1.6-3.7 3.7-3.7h0.2 15.2l-5.3-5.5c-0.5-0.3-0.9-0.8-1.2-1.3l-0.1-0.1c-0.3-0.5-0.4-1.1-0.4-1.7 0-2 1.6-3.6 3.7-3.6 1.1 0 2.2 0.6 2.9 1.5z" /></svg>

@@ -21,7 +21,7 @@ var gulp           = require('gulp'),
 			},
 			notify: false,
 			// tunnel: true,
-			// tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
+			//tunnel: "projectmane" //Demonstration page: http://projectmane.localtunnel.me
 		});
 	});
 

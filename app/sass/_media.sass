@@ -5,22 +5,165 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	/**/
-
+	.header
+		&__cart
+			&-score
+				&_wrapper
+					right: 10px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
-
+	.header
+		&-img
+			width: 25px
+			height: 25px
+		&__cart
+			&-score
+				&_wrapper
+					right: 5px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
+	.header
+		&__search
+			display: none
+		&__client
+			&-account
+				display: none
+	.nav
+		display: none
+		width: 100%
+		&__menu
+			flex-direction: column
+			align-items: flex-start
+			li
+				display: block
+				margin-left: 10px
+		&__icon
+			display: inline-block
+  	float: right
+  	&:after
+  		content: ''
+  		clear: both
+  &__services
+  	&-wrapper
+  		display: inline-block
+				float: left
+			&-search
+				&-wrap
+					display: flex
+					justify-content: center
+					align-items: center
+	.banner
+		padding: 25px 0
+		background-blend-mode: multiply
+		background: linear-gradient(to bottom, rgba(151,157,169,0.88) 0%,rgba(151,157,169,0.88) 29%,rgba(146,152,164,0.88) 65%,rgba(148,154,166,0.88) 77%,rgba(145,151,163,0.88) 83%,rgba(143,149,161,0.88) 100%), url("../img/example-bg.jpg");
+		margin-bottom: 0
+		&-stick
+			width: 100%
+			height: 5px
+			margin-top: 14px
+			margin-bottom: 10px
+		&-title
+			max-width: 91.6666667%
+			font-size: 24px
+			line-height: 23.8px
+			color: white
+		&-subtitle
+			font-size: 14px
+			letter-spacing: 1.79px
+			color: white
+		&-desc
+			margin-top: 15px
+			margin-bottom: 19px
+			font-size: 14px
+		&-ship
+			width: 100%
+			background-color: rgba(255, 255, 255, 0.05)
+			padding-top: 23px
+			padding-bottom: 20px
+	.devices
+		margin-top: 0px
+		padding-top: 38px
+		&__title
+			justify-content: space-between
+			padding-bottom: 25px
+			&-stick
+			&-content
+				font-size: 25px
+		&__select-wrap
+			width: 130px
+			margin: 0 auto
+			&-select
+				font-size: 12px
+				background-position: 90% center
+		&__sort
+			&_price
+				padding-left: 0
+				display: flex
+				justify-content: space-between
+				&-wrapper
+					display: none
+					position: absolute
+					right: 0%
+	    width: 100vw
+	    top: 47px
+	    background-color: #f2f2f2
+	    padding: 26px 15px
+	    margin-right: auto
+	    margin-left: auto
+	    justify-content: space-between
+	    border-top: 7px solid #5da29c
+	    z-index: 3
+	    &--opened
+	    	display: flex
+			&_type
+				padding-right: 0
+	.nav
+		&__services
+			&-search
+				&-wrap
+					&--opened
+						background-color: $extraColor
+				&-block
+					&--opened
+						display: flex
+						padding: 10px 0
+				&--opened
+					svg
+						path
+							fill: white !important
+		&-slide
+			&_left
+				margin-right: 0px
+			&_right
+				margin-left: 0px
+			&_mob-filter
+				display: flex
+				width: 40px
+				height: 40px
+				background-color: #f4f4f4
+				justify-content: center
+				align-items: center
+				&--opened
+					background-color: #5da29c
+					height: 47px
+					margin-bottom: -7px
+					border-bottom: 7px solid #5da29c
+					svg
+						path
+							fill: white !important
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
-
+	.header
+		&-img
+			width: 21px
+			height: 21px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

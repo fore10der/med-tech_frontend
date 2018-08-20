@@ -1,9 +1,6 @@
 .nav
 	width: 59.5726496%
 	float: left
-	@media (max-width: 768px)
-		display: none
-		width: 100%
 	&-wrap
 		width: 100%
 		overflow: auto
@@ -24,6 +21,8 @@
 			margin-left: 19px
 		&_left
 			margin-right: 24px
+		&_mob-filter
+			display: none
 	&__menu
 		width: 100%
 		display: flex
@@ -32,17 +31,11 @@
 		padding: 0
 		margin: 0
 		align-items: center
-		@media (max-width: 768px)
-			flex-direction: column
-			align-items: flex-start
 		li
 			padding-top: 17px
 			padding-bottom: 17px
 			float: left
 			list-style-type: none
-			@media (max-width: 768px)
-			 display: block
-				margin-left: 10px
 			a
 				text-transform: uppercase
 				font-weight: 600
@@ -57,17 +50,11 @@
   height: 20px
   cursor: pointer
   background-image: url('../img/icons/hamburger.svg')
-  padding: 17px 11px
+  padding: 14px 11px
+  padding-right: 0
   box-sizing: content-box
   background-repeat: no-repeat
   background-position: center center
-  @media (max-width: 768px)
-  	display: inline-block
-  	float: right
-  &:after
-  	@media (max-width: 768px)
-  		content: ''
-  		clear: both
 	&__services
 		padding: 0
 		margin: 0
@@ -77,9 +64,6 @@
 		&-wrapper
 			display:  inline-block
    float: right
-			@media (max-width: 768px)
-				display: inline-block
-				float: left
 		&-vk
 			background-image: url('../img/icons/vk.svg')
 		&-fb
@@ -87,32 +71,24 @@
 		&-twitter
 			background-image: url('../img/icons/twitter.svg')
 		&-search
-			&--opened
-				svg
-					path
-						fill: white !important
 			&-wrap
 				display: none
 				padding-left: 21px !important
 				padding-right: 21px !important
-				@media (max-width: 768px)
-					display: flex
-					justify-content: center
-					align-items: center
-				&--opened
-					background-color: $extraColor
 			&-block
+					border: none
+					padding: 0 -15px
 					width: 100%
-					margin: 0 auto
 					height: 50px
+					top: 143px
 					background-color: #5da29c
 					position: absolute
+					left: 0
+					right: 0
 					display: none
 					justify-content: center
 					align-items: center
-					&--opened
-						display: flex
-						padding: 10px 0
+					z-index: 3
 			&-input
 					margin: 0 auto
 					font-size: 12px
@@ -132,7 +108,7 @@
 		li
 			width: 22px
 			height: 22px
-			padding: 17px 11px
+			padding: 14px 11px
 			box-sizing: content-box
 			a
 				display: inline-block
