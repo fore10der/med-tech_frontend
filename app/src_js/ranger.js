@@ -1,6 +1,7 @@
 $(function() {
-	var slider = document.querySelector(".devices__sort_price-ranger");
-	noUiSlider.create(slider, {
+	var sliders = document.querySelectorAll(".devices__sort_price-ranger");
+	sliders.forEach(function (slider) {
+			noUiSlider.create(slider, {
 	start: [200, 800],
 	connect: true,
 	range: {
@@ -19,4 +20,5 @@ $(function() {
 	}
 
 });
+	})
 });

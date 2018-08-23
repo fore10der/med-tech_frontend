@@ -2,6 +2,22 @@
 
 /*==========  Desktop First  ==========*/
 
+@media only screen and (min-width : 992px) and (max-width : 1200px)
+
+	.footer
+		&-button
+			font-size: 14px
+		&__subscribe
+			&-title
+				font-size: 12px
+		&__contacts
+			&-elem
+				font-size: 12px
+		&__logo
+			img
+				height: 86px
+		&__copyright
+			font-size: 12px
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	/**/
@@ -10,10 +26,40 @@
 			&-score
 				&_wrapper
 					right: 10px
+	.devices
+		&__sort
+			&_price
+				&-ranger
+					width: 150px
+		&__select
+			&-wrap
+				width: 150px
+
+@media only screen and (min-width : 768px) and (max-width : 992px)
+
+	.footer
+		&-button
+			font-size: 10px
+		&__subscribe
+			&-title
+				font-size: 10px
+				line-height: 1.4
+				text-align: center
+		&__logo
+			img
+				height: 86px
+		&__copyright
+			font-size: 12px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
+	.geography
+		margin-bottom: 52px
+		&__content
+			width: 100%
+		&__map
+			top: 0
 	.header
 		&-img
 			width: 25px
@@ -22,10 +68,21 @@
 			&-score
 				&_wrapper
 					right: 5px
+	.devices
+		&__page-nav
+			&-nums
+				width: 42.6388889%
+		&__sort
+			&_price
+				&-ranger
+					width: 90px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
+
+	.hr__container
+		padding: 0
 	.header
 		&__search
 			display: none
@@ -35,18 +92,35 @@
 	.nav
 		display: none
 		width: 100%
+		&-choosed
+			&:after
+				background-color: transparent
+		&__container
+			padding-right: 0
 		&__menu
 			flex-direction: column
 			align-items: flex-start
+			position: absolute
+			z-index: 4
+			border-top: 6px solid $extraColor
+			background-color: #f2f2f2
+			left: 0
+			top: 140px
 			li
 				display: block
-				margin-left: 10px
+				margin: 0 auto
+				padding-top: 20px
+    padding-bottom: 20px
 		&__icon
 			display: inline-block
   	float: right
   	&:after
   		content: ''
   		clear: both
+  	&--opened
+  		background-color: $extraColor
+  		path
+  			fill: white
   &__services
   	&-wrapper
   		display: inline-block
@@ -85,8 +159,14 @@
 			padding-top: 23px
 			padding-bottom: 20px
 	.devices
+		position: relative
 		margin-top: 0px
 		padding-top: 38px
+		&__page-nav
+			&-nums
+				width: 62.962963%
+		&__row-header
+			position: relative
 		&__title
 			justify-content: space-between
 			padding-bottom: 25px
@@ -95,7 +175,6 @@
 				font-size: 25px
 		&__select-wrap
 			width: 130px
-			margin: 0 auto
 			&-select
 				font-size: 12px
 				background-position: 90% center
@@ -106,22 +185,25 @@
 			&_price
 				padding-left: 0
 				display: flex
-				justify-content: space-between
+				justify-content: flex-end
 				&-wrapper
 					display: none
-					position: absolute
-					right: 0%
-	    width: 100vw
-	    top: 47px
-	    background-color: #f2f2f2
-	    padding: 26px 15px
-	    margin-right: auto
-	    margin-left: auto
-	    justify-content: space-between
-	    border-top: 7px solid #5da29c
-	    z-index: 3
-	    &--opened
-	    	display: flex
+					&_mobile
+						position: absolute
+						right: 0%
+		    width: 100%
+		    top: 146px
+		    background-color: #f2f2f2
+		    padding: 26px 15px
+		    margin-right: auto
+		    margin-left: auto
+		    justify-content: center
+		    border-top: 7px solid #5da29c
+		    z-index: 3
+		    &--opened
+		    	display: flex
+		    .devices__sort_price-ranger
+		    	width: 75%
 			&_type
 				padding-right: 0
 
@@ -140,10 +222,10 @@
 						path
 							fill: white !important
 		&-slide
-			&_left
-				margin-right: 0px
 			&_right
-				margin-left: 0px
+				margin-left: 18px
+			&_left
+				margin-right: 18px
 			&_mob-filter
 				display: flex
 				width: 40px
@@ -206,20 +288,53 @@
 		&__logo
 			img
 				width: 100%
+		&__nav
+			&-wrapper
+				justify-content: flex-start
+		&__requisites
+			justify-content: flex-start
+			margin-top: 21px
+			margin-bottom: 30px
+		&__copyright
+			margin-bottom: 18px
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
+	.devices
+		&__page-nav
+			&-nums
+				width: auto
+			&-num
+				margin-right: 6px
+				&_extra
+					display: none
+				&_last
+					margin: 0
 	.header
 		&-img
 			width: 21px
 			height: 21px
+	.nav
+		&-slide
+			&_right
+				margin-left: 6px
+			&_left
+				margin-right: 6px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
 
+	.devices
+			&__sort
+				&_price
+					padding-left: 0
+					display: flex
+					justify-content: space-between
+			&__select-wrap
+				margin: 0 auto
 
 /*==========  Mobile First  ==========*/
 

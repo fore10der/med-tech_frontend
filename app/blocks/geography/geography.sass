@@ -1,11 +1,11 @@
 .geography
-	height: 751px
 	width: 100%
- background-image: url("../img/geography/geography.svg"), linear-gradient(to top, #ffffff 0%, #d9d9d9 100%)
+ background-image: linear-gradient(to top, #ffffff 0%, #d9d9d9 100%)
  background-repeat: no-repeat
  background-position: center center
- margin-bottom: 81px
  &__content
+ 	position: relative
+ 	z-index: 20
  	padding-top: 52px
  	width: 47.826087%
 	 &-stick
@@ -27,6 +27,17 @@
 			font-weight: 400
 			line-height: 25px
 	&__map
+		position: relative
+		text-align: center
+		top: -160px
+		width: 100%
+		height: auto
+		&-content
+			width: 100%
+			height: 100%
+			background-size: 100% auto
+			background-repeat: no-repeat
+			background-image: url('../img/geography/geography.svg')
 		&-point
 			position: absolute
 			border: 2px solid #666666
@@ -39,3 +50,86 @@
 				&_medium
 					width: 14px
 					height: 14px
+		&-hint
+			padding: 20px
+			position: absolute
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.51)
+			border: 3px solid #5da29c
+			background-color: #fdfdfd
+			width: 240px
+			z-index: 4
+			text-align: left
+			margin-left: 45px
+   margin-top: -25px
+   padding-bottom: 5px
+   display: none
+   &--opened
+   	display: block
+   	&_to
+   		&-big-point
+   			margin-left: 45px
+   			margin-top: -25px
+   		&-medium-point
+   			margin-left: 35px
+    		margin-top: -30px
+
+			&:after
+			 background-color: #ffffff
+			 border-left: 3px solid #5da29c
+			 border-bottom: 3px solid #5da29c
+			 content: "\00a0"
+			 display: block
+			 height: 20px
+			 left: -32px
+			 position: relative
+			 top: -140px
+			 transform: rotate( 45deg )
+			 -moz-transform: rotate( 45deg )
+			 -ms-transform: rotate( 45deg )
+			 -o-transform: rotate( 45deg )
+			 -webkit-transform: rotate( 45deg )
+			 width: 20px
+		&-title
+			color: #120001
+			font-family: "Open Sans"
+			font-size: 16px
+			font-weight: 700
+			line-height: 25px
+			text-transform: uppercase
+		&-desc
+			color: #000000
+			font-family: "Open Sans"
+			font-size: 14px
+			font-weight: 400
+			margin-bottom: 0
+#geography__map-point
+	&-1					
+		top: 47.1893491%
+		left: 12.361466326%
+	&-2
+		top: 64.7928994%
+		left: 11.253196931%
+	&-3
+		top: 55.917159763%
+		left: 26.427962489%
+	&-4
+		top: 37.573964497%
+		left: 22.080136402% 
+	&-5
+		top: 74.26035503%
+		left: 46.973572038%
+	&-6
+		top: 62.721893491%
+		left: 52.514919011%
+	&-7
+		top: 47.485207101%
+		left: 41.858482523%
+	&-8
+		top: 35.059171598%
+		left: 50.639386189%
+	&-9
+		top: 39.49704142%
+		left: 68.883205456%
+	&-10
+		top: 65.976331361%
+		left: 88.9173%
