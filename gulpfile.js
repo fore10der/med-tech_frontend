@@ -17,7 +17,8 @@ var gulp           = require('gulp'),
 	gulp.task('browser-sync', function() {
 		browserSync({
 			server: {
-				baseDir: 'app'
+				baseDir: 'app',
+				index: "team.html"
 			},
 			notify: false,
 			// tunnel: true,
@@ -124,19 +125,6 @@ gulp.task('rsync', function() {
 		compress: true
 	}));
 });
-
-gulp.task('min-css', function() {
-	return gulp.src('app/template/**/*.css')
-	.pipe(cleanCSS()) // Опционально, закомментировать при отладке
-	.pipe(gulp.dest('app/fixedtemplate/'))
-});
-
-gulp.task('min-js', function() {
-	return gulp.src('app/template/**/*.js')
-	.pipe(uglify()) // Опционально, закомментировать при отладке
-	.pipe(gulp.dest('app/fixedtemplate/'))
-});
-
 
 gulp.task('removedist', function() { return del.sync('dist'); });
 gulp.task('clearcache', function () { return cache.clearAll(); });
