@@ -1,0 +1,237 @@
+.device
+	&__nav
+		&-name
+			display: flex
+			align-items: center
+			color: #0a0a0a
+			font-family: "Open Sans"
+			font-size: 16px
+			font-weight: 600
+			margin-right: auto
+		&-title
+			margin: 0
+	&__wrapper
+		margin-top: 30px
+		margin-bottom: 52px
+	&__gallery
+		padding: 14px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		&-img
+			max-width: 100%
+			max-height: 100%
+			cursor: pointer
+  	&-wrapper
+  		width: 32%
+  		height: 198px
+  		display: flex
+  		justify-content: center
+  		align-items: center
+    &_last
+    	margin-right: 0
+    &_first
+    	margin-left: 0
+	&__info
+		&-title
+			color: #2f2f2f
+			font-family: "Open Sans"
+			font-size: 30px
+			font-weight: 600
+		&-text
+			margin: 10px 0 18px 0
+			word-wrap: break-word
+			color: #6f6f6f
+			font-family: "Open Sans"
+			font-size: 12px
+			font-weight: 400
+	&__availability
+		display: flex
+		align-items: center
+	&__pics
+		&-choosed
+			max-height: 622px
+			max-width: 100%
+			&-wrapper
+				display: flex
+				align-items: flex-end
+				justify-content: center
+				margin-bottom: auto
+				height: 622px
+				width: 100%
+				border: 1px solid #c3c3c3
+				cursor: pointer
+	&__brand
+	&__about
+		width: 100%
+		padding-top: 8px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		&-text
+			font-family: "Open Sans"
+			font-size: 12px
+			letter-spacing: 0.7px
+		&-key
+			color: #6f6f6f
+			font-weight: 400
+			margin-right: 12px
+		&-value
+			color: #000000
+			font-family: "Open Sans"
+			font-weight: 600
+			text-decoration: underline
+	&__rating
+		&-star
+			fill-rule:evenodd
+			clip-rule:evenodd
+			fill: #d8d8d8
+			&_marked
+				fill:#5da29c
+	&__prices
+		width: 50%
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-top: 20px
+		margin-bottom: 27px
+		&-price
+			font-family: "Myriad Pro Semibold"
+			font-size: 45px
+			font-weight: 400
+			letter-spacing: 1.8px
+			&:after
+				margin-left: 6px
+				content: ''
+				-webkit-mask-image: url("../img/icons/ruble.svg")
+				background-color: $extraColor
+				mask-image: url("../img/icons/ruble.svg")
+				height: 30px
+				width: 23px
+				background-position: center
+				background-size: 100% 100%
+				display: inline-block
+				-webkit-mask-repeat: no-repeat
+				mask-repeat: no-repeat
+			&_lost
+				color: #6f6f6f
+				text-decoration: line-through
+				&:after
+					background-color: #6f6f6f
+			&_new
+				color: $extraColor
+				&:after
+					background-color: $extraColor
+	&__buy
+		display: flex
+		justify-content: space-between
+		margin-bottom: 42px
+		&-button
+			font-family: "Open Sans"
+			font-size: 30px
+			font-weight: 600
+			text-decoration: none
+			color: black
+			&:hover
+				color: black
+				text-decoration: none
+		&-value
+			width: 45px
+			border: 1px solid #c3c3c3
+			background-color: white
+			text-align: center
+			color: #141414
+			font-family: "Open Sans"
+			font-size: 18px
+			font-weight: 600
+		&-button_act
+			width: 22%
+			height: 40px
+			text-align: center
+			color: #ffffff
+			font-family: "Open Sans"
+			font-size: 18px
+			line-height: 40px
+			font-weight: 700
+			text-transform: uppercase
+			letter-spacing: 2.25px
+			background-color: #5da29c
+			border: none
+			&_special
+				width: 52%
+				background-color: #d21c5b
+	&__share
+		display: flex
+		align-items: center
+		margin-bottom: 67px
+		&-title
+			color: #6f6f6f
+			font-family: "Open Sans"
+			font-size: 14px
+			font-weight: 400
+			letter-spacing: 0.7px
+			margin-right: 3px
+		&-ico
+			background-color: white
+			mask-repeat: no-repeat
+			-webkit-mask-repeat: no-repeat
+			width: 20px
+			height: 20px
+			&_twitter
+				mask-image: url(../img/icons/twitter.svg)
+			&_vk
+				mask-image: url(../img/icons/vk.svg)
+			&_fb
+				mask-image: url(../img/icons/facebook.svg)
+		&-share
+			width: 42px
+			height: 42px
+			display: flex
+			justify-content: center
+			align-items: center
+			border-radius: 50%
+			margin-left: 10px
+			&_twitter
+				background-color: #1545a6
+				opacity: 0.67
+			&_vk
+				background-color: #3c5ea9
+				opacity: 0.66
+			&_fb
+				background-color: #5e659f
+	&__desc
+		&-title
+			position: relative
+			color: $extraColor
+			font-family: "Open Sans"
+			font-size: 14px
+			font-weight: 600
+			text-transform: uppercase
+			letter-spacing: 1.4px
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-bottom: 19px
+			&:before
+				content: ''
+				mask-image: url(../img/icons/pen.svg)
+				width: 13px
+				height: 13px
+				background-color: $extraColor
+				margin-right: 9px
+			&:after
+				content: ''
+				width: 100%
+				position: absolute
+				height: 8px
+				background-color: #5da29c
+				top: 31px
+		&-content
+			min-height: 200px
+			border: 1px solid #ececec
+			background-color: #ffffff
+			color: #6f6f6f
+			font-family: "Open Sans"
+			font-size: 14px
+			font-weight: 400
+			padding: 24px 31px 25px 25px

@@ -18,7 +18,7 @@ var gulp           = require('gulp'),
 		browserSync({
 			server: {
 				baseDir: 'app',
-				index: "team.html"
+				index: "device.html"
 			},
 			notify: false,
 			// tunnel: true,
@@ -40,7 +40,8 @@ gulp.task('common-js', function() {
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/nouislider/distribute/nouislider.min.js'
+		'app/libs/nouislider/distribute/nouislider.min.js',
+		'app/libs/intense/intense.js'
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Минимизировать весь js (на выбор)
