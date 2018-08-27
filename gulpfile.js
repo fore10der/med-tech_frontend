@@ -37,7 +37,7 @@ gulp.task('common-js', function() {
 	.pipe(gulp.dest('app/js'));
 });
 
-gulp.task('js', ['common-js'], function() {
+gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/nouislider/distribute/nouislider.min.js',
@@ -73,7 +73,7 @@ gulp.task('imagemin', function() {
 	.pipe(gulp.dest('dist/img')); 
 });
 
-gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
+gulp.task('build', ['removedist', 'imagemin', 'sass'], function() {
 
 	var buildFiles = gulp.src([
 		'app/*.html',

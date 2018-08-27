@@ -7,7 +7,6 @@ $(function() {
  		e.preventDefault();
    $(".device__buy-value").val() > 1 ? $(".device__buy-value").val($(".device__buy-value").val() - 1) : $(".device__buy-value").val();
  });
- $('.device__pics-choosed').on('click', Intense(document.querySelector(".device__pics-choosed")));
  $('.device__gallery-img').each(function () {
  	$(this).on('click',function () {
  		$('.device__pics-choosed').attr("src",$(this).attr("src"));
