@@ -4,6 +4,10 @@
 	&__page
 		display: flex
 		justify-content: space-between
+	&__title
+		&-wrapper
+			margin-right: auto
+			display: flex
 	&-title
 		display: flex
 		align-items: center
@@ -13,8 +17,15 @@
 		font-weight: 600
 		text-transform: uppercase
 		margin-right: auto
+	&-subtitle
+		color: #0a0a0a
+		font-size: 16px
+		display: flex
+		align-items: center
+		font-weight: 600
 	&-backbutton
 		margin-right: 16px
+	&-nextbutton
 	&-choosed
 		position: relative
 		overflow: visible
@@ -31,6 +42,7 @@
 		width: 100%
 		overflow: auto
 	&-slide
+		flex-shrink: 0
 		width: 40px
 		height: 40px
 		background-color: #f4f4f4

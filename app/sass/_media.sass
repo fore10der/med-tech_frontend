@@ -20,6 +20,23 @@
 			font-size: 12px
 	.features
 		&-img
+	.device
+		&__prices
+			width: 65%
+		&__buy
+			&-button
+				&_act
+					font-size: 14px
+					width: 19%
+					&_special
+						width: 49%
+			&-count
+				width: 29%
+		&__pics
+			&-choosed
+				max-height: 518px
+				&-wrapper
+					height: 518px
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
@@ -53,6 +70,34 @@
 				height: 86px
 		&__copyright
 			font-size: 12px
+	.device
+		&__pics
+			&-choosed
+				max-height: 383px
+				&-wrapper
+					height: 383px
+		// &__desc
+  //  width: 100vw
+  //  position:  relative
+  //  left: -375px
+  //  margin: 0 auto
+		&__info
+			&-title
+				font-size: 26px
+		&__prices
+			width: 80%
+		&__buy
+			flex-wrap: wrap
+			&-count
+				width: 100%
+			&-value
+				width: 60%
+			&-button_act
+				margin-top: 6px
+				font-size: 16px
+				width: 28%
+				&_special
+					width: 70%
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
@@ -97,6 +142,61 @@
 			&-desc
 				padding-right: 16px
 	.device
+		&__buy
+			&-count
+				order: 0
+				width: 100%
+			&-value
+				width: 63%
+			&-button
+				&_act
+					width: 100%
+					order: 2
+					&_special
+						margin-top: 18px
+						width: 100%
+						order: 3
+		&__prices
+			order: 1
+			width: 100%
+			margin-top: 18px
+			margin-bottom: 8px
+		&__socials
+			width: 100%
+			justify-content: space-between
+			&-social
+				margin: 0
+		&__desc
+			padding: 0
+			&-content
+				padding: 18px
+		&__share
+			margin-bottom: 44px
+			&-title
+				width: 100%
+				margin-bottom: 21px
+		&__pics
+			&-choosed
+				&-wrapper
+					height: auto
+		&__rating
+			svg
+				width: 20px
+				height: 20px
+		&__info
+			&-title
+				font-size: 24px
+				display: block
+				width: 70%
+			&-text
+				font-size: 14px
+		&__about
+			flex-direction: column
+			align-items: flex-start
+			justify-content: space-between
+			height: 90px
+			&-text
+				font-size: 14px
 		&__nav
 			&-title
 				align-items: flex-start
@@ -105,12 +205,9 @@
 	.nav
 		&__page
 			margin-top: 14px
-			display: block
 		&-backbutton
 			margin-right: 16px !important
 			margin-bottom: auto
-			display: inline-block
-			text-align: center
 	.features
 		margin-bottom: 46px
 	.title
@@ -126,6 +223,15 @@
 	.nav
 		display: none
 		width: 100%
+		&-title
+			margin: 0
+		&__title
+			&-wrapper
+				line-height: 1.35
+				flex-wrap: wrap
+				justify-content: flex-start
+		&-nextbutton
+			display: none
 		&-choosed
 			&:after
 				background-color: transparent

@@ -64,12 +64,14 @@ body
 		width: 25px
  	height: 2px
  	background-color: #5da29c
+ 	flex-shrink: 0
  	&_dir
  		&_right
  			margin-left: 25px
  		&_left
  			margin-right: 25px
 	&-content
+		text-align: center
 		display: inline-block
 		color: #0a0a0a
   font-family: "Open Sans"
@@ -77,12 +79,7 @@ body
   font-weight: 600
   text-transform: uppercase
 .separator
-	display: flex
-	align-items: center
-	font-family: "Open Sans"
- font-size: 18px
- font-weight: 600
- margin: 0 12px
+ margin: 0 12px !important
 .hr
 	width: 100%
 	height: 1px
@@ -106,6 +103,7 @@ input:active, :hover, :focus
 @import "../blocks/footer/footer"
 @import "../blocks/contacts/contacts"
 @import "../blocks/banner/banner"
+@import "../blocks/cart/cart"
 @import "../blocks/devices/devices"
 @import "../blocks/same_devices/same_devices"
 @import "../blocks/device/device"
