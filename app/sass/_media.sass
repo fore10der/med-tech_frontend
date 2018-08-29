@@ -4,6 +4,11 @@
 
 @media only screen and (min-width : 992px) and (max-width : 1200px)
 
+	.cart
+		&__params
+			&-count
+				&-wrapper
+					width: 80%
 	.footer
 		&-button
 			font-size: 14px
@@ -56,7 +61,19 @@
 				width: 150px
 
 @media only screen and (min-width : 768px) and (max-width : 992px)
-
+	.cart
+		&__content
+			&-title
+				font-size: 12px
+			&-text
+				padding-left: 12px
+				padding-right: 12px
+		&__params
+			&-count
+				&-wrapper
+					width: 100%
+				&-value
+					width: 45px !important
 	.footer
 		&-button
 			font-size: 10px
@@ -128,6 +145,85 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
+	.cart
+		&-del
+			vertical-align: middle !important
+		&-hr
+			display: block
+			width: 70%
+			margin: 5px auto
+		&-button
+			&_less
+				margin: 0 auto
+				order: 2
+			&_more
+				margin: 0 auto
+				order: 0
+		&-order
+			width: 50%
+		&__row
+			&_params
+				display: flex
+				flex-direction: column
+				line-height: normal
+				height: 100%
+				padding-bottom: 10px
+		&__params
+			width: 36%
+			vertical-align: middle
+			text-align: center
+			padding-left: 11px
+			&-total
+				padding: 0 !important
+			&-price
+				padding: 0 !important
+				&-value
+					font-size: 18px
+					&:after
+						width: 10px
+						height: 14px
+			&_content
+				padding: 0
+			&-count
+				border: none
+				width: 100%
+				text-align: left
+				&-value
+					width: 40px !important
+					flex-shrink: 0
+					order: 1
+					border: none
+					margin: 0 auto
+				&-wrapper
+					flex-direction: column
+			&-price
+				border: none
+				width: 100%
+				text-align: left
+			&-total
+				border: none
+				width: 100%
+				text-align: left
+			&_content
+				vertical-align: top
+			&-inner
+				display: block
+		&-del
+			width: 14%
+		&__content
+			&-title
+				font-size: 11px
+				line-height: 1.25
+			&-text
+				padding: 19px
+				vertical-align: top
+				line-height: normal
+			&-wrapper
+				flex-direction: column
+			&-img
+				&-wrapper
+					margin: 0
+					margin-bottom: 19px
 	.team
 		&__workers
 			&-worker
@@ -259,8 +355,8 @@
   		clear: both
   	&--opened
   		background-color: $extraColor
-  		path
-  			fill: white
+  		.nav-icon
+  			background-color: white
   &__services
   	&-wrapper
   		display: inline-block
@@ -358,9 +454,8 @@
 						display: flex
 						padding: 10px 0
 				&--opened
-					svg
-						path
-							fill: white !important
+					.nav-icon
+  				background-color: white
 		&-slide
 			&_right
 				margin-left: 18px
@@ -378,9 +473,8 @@
 					height: 47px
 					margin-bottom: -7px
 					border-bottom: 7px solid #5da29c
-					svg
-						path
-							fill: white !important
+					.nav-icon
+  				background-color: white
 	.partners
 		padding-bottom: 20px
 		&__title

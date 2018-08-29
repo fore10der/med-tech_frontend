@@ -1,6 +1,26 @@
 .nav
 	width: 59.5726496%
 	float: left
+	&-icon
+		width: 14px
+		height: 14px
+		background-color: black
+		mask-repeat: no-repeat
+		flex-shrink: 0
+		&_right
+			mask-image: url(../img/icons/arrow-right.svg)
+	 &_left
+			mask-image: url(../img/icons/arrow-left.svg)
+		&_filter
+			mask-image: url(../img/icons/mob-filter.svg)
+		&_hamburger
+			mask-image: url(../img/icons/hamburger.svg)
+			background-color: $extraColor
+		&_search
+			mask-image: url(../img/icons/search.svg)
+		&_large
+			width: 24px
+			height: 20px
 	&__page
 		display: flex
 		justify-content: space-between
@@ -52,9 +72,7 @@
 		&:hover
 			background-color: $extraColor
 			.nav-icon
-				fill-rule: evenodd
-				clip-rule: evenodd
-				fill: white
+				background-color: white
 		&_right
 			margin-left: 19px
 		&_left

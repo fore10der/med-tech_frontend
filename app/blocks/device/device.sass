@@ -74,16 +74,14 @@
 			font-weight: 600
 			text-decoration: underline
 	&__rating
-		svg
-			width: 12px
 		&-star
-			fill-rule:evenodd
-			clip-rule:evenodd
-			fill: #d8d8d8
+			mask-image: url("../img/icons/star.svg")
 			width: 12px
 			height: 12px
+			display: inline-block
+			background-color: #d8d8d8
 			&_marked
-				fill:#5da29c
+				background-color: #5da29c
 	&__prices
 		width: 50%
 		display: flex
@@ -130,6 +128,7 @@
 			width: 24%
 			justify-content: space-between
 		&-button
+			flex-shrink: 0
 			font-family: "Open Sans",sans-serif
 			font-size: 30px
 			font-weight: 600
@@ -140,6 +139,7 @@
 				text-decoration: none
 		&-value
 			width: 45px
+			flex-shrink: 0
 			border: 1px solid #c3c3c3
 			background-color: white
 			text-align: center

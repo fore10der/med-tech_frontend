@@ -7,8 +7,9 @@ $(function() {
  		$('#nav__icon_header').toggleClass('nav__icon--opened');
    $('#nav__menu_header').toggleClass('header__nav--opened');
  });
- $('#nav-header__services-search').on('click', function(e) {
+ $('#nav-header__services-search-wrap').on('click', function(e) {
  	e.preventDefault();
+ 	console.log("dev");
  	$('#nav__icon_header').removeClass('nav__icon--opened');
   $('#nav__menu_header').removeClass('header__nav--opened');
   $('#nav-header__services-search-wrap').toggleClass('nav__services-search-wrap--opened');
