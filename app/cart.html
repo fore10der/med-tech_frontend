@@ -149,7 +149,7 @@
 					</div>
 					<div class="cart__head-text cart-del"></div>
 			</div>
-				<div class="cart__content cart__row cart__order">
+				<div id="foo" class="cart__content cart__row cart__order">
 					<div class="cart-text cart__content-text cart cart__order-device">
 						<div class="cart__content-wrapper">
 						<div class="cart__content-img-wrapper">
@@ -170,11 +170,11 @@ Abdominal M9 Gezatone</span>
 									</div>
 								</div>
 								<div class="cart-text cart__content-text cart__params-price cart-centred">
-									<span class="cart__params-price-value">3 987</span>
+									<span class="cart__params-price-value cart__params-price_per_item">3 987</span>
 								</div>
 								<div class="hr cart-hr"></div>
 								<div class="cart-text cart__content-text cart__params-total cart-centred">
-									<span class="cart__params-price-value">987</span>
+									<span class="cart__params-price-value cart__params-price_total">987</span>
 								</div>
 							</div>
 						</div>
@@ -183,7 +183,7 @@ Abdominal M9 Gezatone</span>
 						<a class="cart-del-icon" href="#"></a>
 					</div>
 			</div>
-				<div class="cart__content cart__row cart__order">
+				<div id="foo__one" class="cart__content cart__row cart__order">
 					<div class="cart-text cart__content-text cart cart__order-device">
 						<div class="cart__content-wrapper">
 						<div class="cart__content-img-wrapper">
@@ -204,11 +204,11 @@ Abdominal M9 Gezatone</span>
 									</div>
 								</div>
 								<div class="cart-text cart__content-text cart__params-price cart-centred">
-									<span class="cart__params-price-value">3 987</span>
+									<span class="cart__params-price-value cart__params-price_per_item">3 987</span>
 								</div>
 								<div class="hr cart-hr"></div>
 								<div class="cart-text cart__content-text cart__params-total cart-centred">
-									<span class="cart__params-price-value">987</span>
+									<span class="cart__params-price-value cart__params-price_total">987</span>
 								</div>
 							</div>
 						</div>
@@ -217,7 +217,7 @@ Abdominal M9 Gezatone</span>
 						<a class="cart-del-icon" href="#"></a>
 					</div>
 			</div>
-				<div class="cart__content cart__row cart__order">
+				<div id="foo_two" class="cart__content cart__row cart__order">
 					<div class="cart-text cart__content-text cart cart__order-device">
 						<div class="cart__content-wrapper">
 						<div class="cart__content-img-wrapper">
@@ -238,11 +238,11 @@ Abdominal M9 Gezatone</span>
 									</div>
 								</div>
 								<div class="cart-text cart__content-text cart__params-price cart-centred">
-									<span class="cart__params-price-value">3 987</span>
+									<span class="cart__params-price-value cart__params-price_per_item">3 987</span>
 								</div>
 								<div class="hr cart-hr"></div>
 								<div class="cart-text cart__content-text cart__params-total cart-centred">
-									<span class="cart__params-price-value">987</span>
+									<span class="cart__params-price-value cart__params-price_total">987</span>
 								</div>
 							</div>
 						</div>
@@ -254,7 +254,94 @@ Abdominal M9 Gezatone</span>
 		</div>
 		</div>
 
+		<div class="container px-sm-0 px-4">
+			<div class="row cart__ordering">
+				<div class="col-md-5 cart__promo">
+					<div class="cart__ordering-title">Промо-код</div>
+					<div class="cart__ordering-desc">Lorem ipsum dolor sit amet, consectetuadipiscing elit. Ut non ligula quis orcidapibus efficitur. Sed ex elit, ultrices et maximus</div>
+					<input type="text" class="cart__ordering-input" placeholder="Введите промо-код">
+					<button class="cart__ordering-submit">Применить</button>
+				</div>
+				<div class="col-md-5 offset-md-2 cart__total">
+					<div class="cart__ordering-title cart__ordering-title_total">Итог покупок</div>
+					<div class="cart__ordering-table">
+						<div class="cart__ordering-row">
+							<div class="cart__ordering-cell">Стоимость</div>
+							<div class="cart__ordering-cell cart__ordering-cell_price-value cart__ordering-orders-value cart__ordering-cell_price-value_with_symbol">14256</div>
+						</div>
+						<div class="cart__ordering-row">
+							<div class="cart__ordering-cell">Доставка</div>
+							<div class="cart__ordering-cell cart__ordering-delivery-value cart__ordering-cell_price-value">0</div>
+						</div>
+						<div class="cart__ordering-row">
+							<div class="cart__ordering-cell cart__ordering-cell_total-key">Общая сумма</div>
+							<div class="cart__ordering-cell cart__ordering-total-value cart__ordering-cell_price-value cart__ordering-cell_price-value_with_symbol">14256</div>
+						</div>
+					</div>
+					<button class="cart__ordering-submit">Перейти к оплате</button>
+				</div>
+			</div>
 		</div>
+	</div>
+	<div class="same_devices">
+	<div class="container px-sm-0 px-4">
+		<div class="row">
+				<div class="title col-md-12 order-md-12 col-12 order-0">
+					<span class="title-stick title-stick_dir_left"></span>
+					<span class="title-content">Вас также может заинтересовать</span>
+					<span class="title-stick title-stick_dir_right"></span>
+				</div>
+		</div>
+	</div>
+			<div class="container px-sm-0 px-4">
+			<div class="row devices__products-row same_devices__products-row">
+				<div class="col-md-3">
+					<div class="devices__product">
+						<div class="devices__product-preview" style="background-image: url('img/products/1.png')">
+							<button class="devices__product-buy">
+								<div class="devices__product-icon"></div>
+							</button>
+						</div>
+						<div class="devices__product-title">Миостимулятор электронный RestArt M-18</div>
+						<div class="devices__product-price">987</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="devices__product">
+							<div class="devices__product-preview" style="background-image: url('img/products/1.png')">
+								<button class="devices__product-buy">
+									<div class="devices__product-icon"></div>
+								</button>
+							</div>
+							<div class="devices__product-title">Миостимулятор электронный RestArt M-18</div>
+							<div class="devices__product-price">987</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="devices__product">
+							<div class="devices__product-preview" style="background-image: url('img/products/1.png')">
+								<button class="devices__product-buy">
+									<div class="devices__product-icon"></div>
+								</button>
+							</div>
+							<div class="devices__product-title">Миостимулятор электронный RestArt M-18</div>
+							<div class="devices__product-price">987</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="devices__product">
+							<div class="devices__product-preview" style="background-image: url('img/products/1.png')">
+								<button class="devices__product-buy">
+									<div class="devices__product-icon"></div>
+								</button>
+							</div>
+							<div class="devices__product-title">Миостимулятор электронный RestArt M-18</div>
+							<div class="devices__product-price">987</div>
+						</div>
+					</div>
+				</div>
+			</div>
+</div>
 
 			<footer class="footer">
 	<div class="container px-sm-0 px-4">
@@ -344,6 +431,7 @@ Abdominal M9 Gezatone</span>
 		</div>
 </footer>
 	<script src="js/scripts.min.js"></script>
+	<script src="js/cart.js"></script>
 	<script src="js/responsive_interface.js"></script>
 </body>
 </html>

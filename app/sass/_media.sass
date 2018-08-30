@@ -74,6 +74,13 @@
 					width: 100%
 				&-value
 					width: 45px !important
+		&__ordering
+			&-desc
+				max-height: none
+			&-input
+				margin-top: 10px
+			&-table
+				margin-top: 34px
 	.footer
 		&-button
 			font-size: 10px
@@ -145,7 +152,11 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
+	.title
+		&-stick
+			margin: 0
 	.cart
+		margin-bottom: 43px
 		&-del
 			vertical-align: middle !important
 		&-hr
@@ -155,10 +166,8 @@
 		&-button
 			&_less
 				margin: 0 auto
-				order: 2
 			&_more
 				margin: 0 auto
-				order: 0
 		&-order
 			width: 50%
 		&__row
@@ -191,7 +200,6 @@
 				&-value
 					width: 40px !important
 					flex-shrink: 0
-					order: 1
 					border: none
 					margin: 0 auto
 				&-wrapper
@@ -210,6 +218,21 @@
 				display: block
 		&-del
 			width: 14%
+		&__orders
+			margin-bottom: 31px
+		&__ordering
+			&-desc
+				max-height: none
+			&-input
+				margin-top: 24px
+			&-submit
+				width: 100%
+				margin-top: 22px
+			&-table
+				margin-top: 18px
+		&__promo
+			margin-bottom: 25px
+
 		&__content
 			&-title
 				font-size: 11px
