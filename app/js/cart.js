@@ -33,6 +33,7 @@ updateSum();
 		var $order = $(this).parent().parent().parent().parent().parent().parent();
 		$(this).on('input', function () {
 			updateValues($order);
+			updateSum();
 			$(this).on('change', function () {
 			$(this).val() == '' ? $(this).val(1) : $(this).val();
 			updateValues($order);
