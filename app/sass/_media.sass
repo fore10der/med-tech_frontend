@@ -188,7 +188,7 @@
 				padding: 0 !important
 				&-value
 					font-size: 18px
-					&:after
+				&-currency
 						width: 10px
 						height: 14px
 			&_content
@@ -296,8 +296,7 @@
 				margin-bottom: 21px
 		&__pics
 			&-choosed
-				&-wrapper
-					
+				&-wrapper				
 		&__rating
 			svg
 				width: 20px
@@ -451,7 +450,7 @@
 						position: absolute
 						right: 0%
 		    width: 100%
-		    top: 146px
+		    top: 144px
 		    background-color: #f2f2f2
 		    padding: 26px 15px
 		    margin-right: auto
@@ -478,7 +477,8 @@
 						padding: 10px 0
 				&--opened
 					.nav-icon
-  				background-color: white
+						path
+							fill: white
 		&-slide
 			&_right
 				margin-left: 18px
@@ -497,7 +497,8 @@
 					margin-bottom: -7px
 					border-bottom: 7px solid #5da29c
 					.nav-icon
-  				background-color: white
+  				path
+  					fill: white
 	.partners
 		padding-bottom: 20px
 		&__title
@@ -509,33 +510,26 @@
 		&-partner
 			margin-top: 20px
 			margin-bottom: 10px
-	.contacts
-		padding-top: 26px
-		padding-bottom: 17px
-		&-title
-			justify-content: space-between
-			padding-bottom: 25px
-			padding-top: 33px
-			&__stick
-			&__content
-				font-size: 25px
-		&__logo
-			&-wrapper
-				display: block
-		&__input
-			&-wrap
-				margin-bottom: 18px
 	.footer
-		padding-top: 26px
+		padding-top: 0
+		&__nav
+			&-wrapper
+				&_desc
+					display: none
+				&_mobi
+					display: block
+					li
+						&:first-child
+							padding-left: 0
 		&__title
-			margin-top: 33px
+			margin-top: 0
 			margin-bottom: 27px
 			justify-content: space-between
 		&__input
 			&-wrapper
 				margin-bottom: 18px
 		&__contacts
-			height: 105px
+			height: 135px
 			&-elem
 				margin-left: 20px
 				&:before
@@ -543,6 +537,8 @@
 					width: 13px
 					height: 13px
 		&__logo
+			margin-top: 26px
+			margin-bottom: 34px
 			img
 				width: 100%
 		&__nav
@@ -554,6 +550,14 @@
 			margin-bottom: 30px
 		&__copyright
 			margin-bottom: 18px
+	.contacts
+		margin-bottom: 30px
+		&-input
+			margin-bottom: 26px
+		&-textarea
+			&-wrapper
+				margin-top: 0
+				margin-bottom: 0
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)

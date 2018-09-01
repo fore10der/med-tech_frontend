@@ -4,20 +4,15 @@
 	&-icon
 		width: 14px
 		height: 14px
-		background-color: black
-		mask-repeat: no-repeat
 		flex-shrink: 0
-		&_right
-			mask-image: url(../img/icons/arrow-right.svg)
-	 &_left
-			mask-image: url(../img/icons/arrow-left.svg)
-		&_filter
-			mask-image: url(../img/icons/mob-filter.svg)
+		path
+			fill-rule: evenodd;
+			clip-rule: evenodd;
+			fill: black;
 		&_hamburger
+			-webkit-mask-image: url(../img/icons/hamburger.svg)
 			mask-image: url(../img/icons/hamburger.svg)
 			background-color: $extraColor
-		&_search
-			mask-image: url(../img/icons/search.svg)
 		&_large
 			width: 24px
 			height: 20px
@@ -72,7 +67,8 @@
 		&:hover
 			background-color: $extraColor
 			.nav-icon
-				background-color: white
+				path
+					fill: white
 		&_right
 			margin-left: 19px
 		&_left
@@ -134,7 +130,7 @@
 					padding: 0 -15px
 					width: 100%
 					height: 50px
-					top: 141px
+					top: 140px
 					background-color: #5da29c
 					position: absolute
 					left: 0

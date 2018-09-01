@@ -46,7 +46,7 @@ updateSum();
 		var $count = +$order.find(".cart__params-count-value").val();
 		var $price = +$order.find(".cart__params-price_per_item").text().replace(/\s+/g, '');
 		var $total = $count*$price;
-		var $totalNode = $order.find(".cart__params-price_total");
+		var $totalNode = $order.find(".cart__params-price_total").find("span");
 		$totalNode.text(new Intl.NumberFormat('ru-RU').format($total));
 	}
 

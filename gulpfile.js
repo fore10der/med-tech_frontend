@@ -18,11 +18,11 @@ var gulp           = require('gulp'),
 		browserSync({
 			server: {
 				baseDir: 'app',
-				index: "cart.html"
+				index: "contacts.html"
 			},
 			notify: false,
 			// tunnel: true,
-			//tunnel: "projectmane" //Demonstration page: http://projectmane.localtunnel.me
+			tunnel: "meddev" //Demonstration page: http://projectmane.localtunnel.me
 		});
 	});
 
@@ -50,9 +50,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('sass', function() {
-	return gulp.src(['app/sass/**/*.sass',
-		'app/libs/nouislider/distribute/nouislider.css'
-		])
+	return gulp.src(['app/sass/**/*.sass'])
 	.pipe(sass({outputStyle: 'expanded'}).on("error", notify.onError()))
 	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer(['last 15 versions']))

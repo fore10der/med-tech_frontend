@@ -39,7 +39,7 @@
 		align-items: center
 	&__pics
 		&-choosed
-			max-height: 622px
+			max-height: 100%
 			max-width: 100%
 			object-fit: fill
 			&-wrapper
@@ -95,28 +95,23 @@
 			font-size: 45px
 			font-weight: 400
 			letter-spacing: 1.8px
-			&:after
-				margin-left: 6px
-				content: ''
-				-webkit-mask-image: url("../img/icons/ruble.svg")
-				background-color: $extraColor
-				mask-image: url("../img/icons/ruble.svg")
-				height: 30px
-				width: 23px
-				background-position: center
-				background-size: 100% 100%
-				display: inline-block
-				-webkit-mask-repeat: no-repeat
-				mask-repeat: no-repeat
+			path
+				fill-rule: evenodd
+				clip-rule: evenodd
 			&_lost
 				color: #6f6f6f
-				text-decoration: line-through
-				&:after
-					background-color: #6f6f6f
+				span
+					text-decoration: line-through
+				path
+					fill: #6f6f6f
 			&_new
 				color: $extraColor
-				&:after
-					background-color: $extraColor
+				path
+					fill: $extraColor
+		&-currency
+			height: 30px
+			width: 23px
+			display: inline-block
 	&__buy
 		display: flex
 		justify-content: space-between
@@ -178,17 +173,12 @@
 	&__socials
 		display: flex
 		&-ico
-			background-color: white
-			mask-repeat: no-repeat
-			-webkit-mask-repeat: no-repeat
 			width: 20px
 			height: 20px
-			&_twitter
-				mask-image: url(../img/icons/twitter.svg)
-			&_vk
-				mask-image: url(../img/icons/vk.svg)
-			&_fb
-				mask-image: url(../img/icons/facebook.svg)
+			path
+				fill-rule: evenodd
+				clip-rule: evenodd
+				fill: white
 		&-social
 			width: 42px
 			height: 42px
