@@ -1,5 +1,6 @@
-$(function() {
- ymaps.ready(init);
+export default $(function() {
+if (typeof(ymaps) != 'undefined') {
+  ymaps.ready(init);
  function init(){ 
 
   var map = new ymaps.Map("yamap", {
@@ -22,5 +23,6 @@ $(function() {
   );
   map.geoObjects.add(circlePlacemark);
  }
+}
 
 });

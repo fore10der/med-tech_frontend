@@ -1,13 +1,21 @@
+var $map = $(".geography__map");
 $(function() {
-var $this = $("#RostovOblast");
-var offsetLeft = $this.offset().left - $this.parent().parent().parent().offset().left;
-var offsetTop = $this.offset().top - $this.parent().parent().parent().offset().top;
-console.log(offsetLeft, offsetTop);
-// var offset = $this.offset();
-// var width = $this.innerWidth();
-// var height = $this.innerHeight();
-
-// var centerX = offset.left + width / 2;
-// var centerY = offset.top + height / 2;
-// console.log(centerX,centerY)
+var $this = $("#KhabarovskKrai");
+var xToCenter = toLocaleMapWidth($this[0].getBoundingClientRect().width/2);
+var yToCenter = toLocaleMapHeight($this[0].getBoundingClientRect().height/2);
+var leftOffset = toLocaleMapWidth($this.offset().left - $map.offset().left);
+var topOffset = toLocaleMapHeight($this.offset().top - $map.offset().top);
+$(".point").attr("transform", "translate(" + (-376 + leftOffset + xToCenter).toString() + "," + (-2250+topOffset + yToCenter).toString() +")")
 });
+
+function toLocaleMapWidth(value) {
+	return value * +$map.attr("width") / $map.width();
+}
+
+function toLocaleMapHeight(value) {
+	return value * +$map.attr("height") / $map.height();
+}
+
+function PlacePoint(region) {
+	// body...
+}
