@@ -318,11 +318,46 @@ Abdominal M9 Gezatone</span>
 							<div class="cart__ordering-cell cart__ordering-total-value cart__ordering-cell_price-value cart__ordering-cell_price-value_with_symbol">14256</div>
 						</div>
 					</div>
-					<button class="cart__ordering-submit">Перейти к оплате</button>
+					<button class="cart__ordering-submit" data-toggle="modal" data-target="#orderModal">Перейти к оплате</button>
 				</div>
 			</div>
 		</div>
 	</div>
+	<div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="payment modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="payment-title modal-title" id="exampleModalLabel">Оплата</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       	<form>
+          <div class="form-group">
+            <label for="payment-firstname" class="col-form-label">Имя</label>
+            <input type="text" class="form-control payment-input" id="payment-firstname">
+          </div>
+          <div class="form-group">
+            <label for="payment-lastname" class="col-form-label">Фамилия</label>
+            <input type="text" class="form-control payment-input" id="payment-lastname">
+          </div>
+          <div class="form-group">
+            <label for="payment-email" class="col-form-label">Почта</label>
+            <input type="text" class="form-control payment-input" id="payment-email">
+          </div>
+          <div class="form-group">
+            <label for="payment-phonenumber" class="col-form-label">Номер телефона</label>
+            <input type="text" data-toggle="popover" data-trigger="focus" data-content="Click anywhere in the document to close this popover" value="+" class="form-control payment-input" id="payment-phonenumber">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="payment-submit">Отправить заявку</button>
+      </div>
+    </div>
+  </div>
+</div>
 	<div class="same_devices">
 	<div class="container px-sm-0 px-4">
 		<div class="row">

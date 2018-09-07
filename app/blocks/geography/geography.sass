@@ -4,6 +4,30 @@
  background-repeat: no-repeat
  background-position: center center
  position: relative
+	&__wrapper
+		position: relative
+		z-index: 3
+		display: none
+		&:after
+			content: ''
+		 background-color: #ffffff
+		 border-left: 3px solid #5da29c
+		 border-bottom: 3px solid #5da29c
+		 content: "\00a0"
+		 display: block
+		 height: 30px
+		 left: -18px
+		 top: -240px
+		 position: relative
+		 transform: rotate( 30deg ) skew(-30deg)
+		 -moz-transform: rotate( 30deg ) skewX(-30deg)
+		 -ms-transform: rotate( 30deg ) skewX(-30deg)
+		 -o-transform: rotate( 30deg ) skewX(-30deg)
+		 -webkit-transform: rotate( 30deg ) skewX(-30deg)
+		 width: 35px
+		 z-index: 1
+		&--opened
+			display: block
  &__content
  	position: relative
  	z-index: 20
@@ -32,104 +56,48 @@
 		height: auto
 		position: relative
 		top: -180px
+		overflow: visible !important
 		&-content
 			width: 100%
 			height: 100%
 			background-size: 100% auto
 			background-repeat: no-repeat
 			background-image: url('../img/geography/geography.svg')
+		&-hint
+			position: relative
+			padding: 20px
+			width: 100%
+			height: 100%
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.51)
+			border: 3px solid #5da29c
+			background-color: #fdfdfd
+			text-align: left
+   padding-bottom: 5px
+   padding-top: 8px
+   &--opened
+   	display: block
+		&-title
+			color: #120001
+			font-family: "Open Sans"
+			font-size: 25px
+			font-weight: 700
+			line-height: 55px
+			text-transform: uppercase
+			z-index: 3
+			position: relative
+		&-desc
+			color: #000000
+			font-family: "Open Sans"
+			font-size: 19px
+			font-weight: 400
+			margin-bottom: 0
 		&-point
-			position: absolute
-			border: 2px solid #666666
+			width: 25.65px
+			height: 25.65px
+			border: 4px solid #666666
 			background-color: #5da29c
 			border-radius: 50%
 			&_size
 				&_big
-					width: 25px
-					height: 25px
-				&_medium
-					width: 14px
-					height: 14px
-		&-hint
-			padding: 20px
-			position: absolute
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.51)
-			border: 3px solid #5da29c
-			background-color: #fdfdfd
-			width: 240px
-			z-index: 4
-			text-align: left
-			margin-left: 45px
-   margin-top: -25px
-   padding-bottom: 5px
-   display: none
-   &--opened
-   	display: block
-   	&_to
-   		&-big-point
-   			margin-left: 45px
-   			margin-top: -25px
-   		&-medium-point
-   			margin-left: 35px
-    		margin-top: -30px
-
-			&:after
-			 background-color: #ffffff
-			 border-left: 3px solid #5da29c
-			 border-bottom: 3px solid #5da29c
-			 content: "\00a0"
-			 display: block
-			 height: 20px
-			 left: -32px
-			 position: relative
-			 top: -140px
-			 transform: rotate( 45deg )
-			 -moz-transform: rotate( 45deg )
-			 -ms-transform: rotate( 45deg )
-			 -o-transform: rotate( 45deg )
-			 -webkit-transform: rotate( 45deg )
-			 width: 20px
-		&-title
-			color: #120001
-			font-family: "Open Sans"
-			font-size: 16px
-			font-weight: 700
-			line-height: 25px
-			text-transform: uppercase
-		&-desc
-			color: #000000
-			font-family: "Open Sans"
-			font-size: 14px
-			font-weight: 400
-			margin-bottom: 0
-#geography__map-point
-	&-1					
-		top: 47.1893491%
-		left: 12.361466326%
-	&-2
-		top: 64.7928994%
-		left: 11.253196931%
-	&-3
-		top: 55.917159763%
-		left: 26.427962489%
-	&-4
-		top: 37.573964497%
-		left: 22.080136402% 
-	&-5
-		top: 74.26035503%
-		left: 46.973572038%
-	&-6
-		top: 62.721893491%
-		left: 52.514919011%
-	&-7
-		top: 47.485207101%
-		left: 41.858482523%
-	&-8
-		top: 35.059171598%
-		left: 50.639386189%
-	&-9
-		top: 39.49704142%
-		left: 68.883205456%
-	&-10
-		top: 65.976331361%
-		left: 88.9173%
+					width: 45.79px
+					height: 45.79px
