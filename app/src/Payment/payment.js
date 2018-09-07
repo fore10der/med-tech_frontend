@@ -17,5 +17,4 @@ $(function() {
     else
     	console.log("passed");
 	});
-	$('[data-toggle="popover"]').popover();
 });
