@@ -13,16 +13,18 @@ var gulp           = require('gulp'),
 		ftp            = require('vinyl-ftp'),
 		notify         = require("gulp-notify"),
 		rsync          = require('gulp-rsync');
+  webpack = require('webpack'),
+  webpackStream = require('webpack-stream');
 
 	gulp.task('browser-sync', function() {
 		browserSync({
 			server: {
 				baseDir: 'app',
-				index: "partners.html"
+				index: "index.html"
 			},
 			notify: false,
 			// tunnel: true,
-			tunnel: "meddev" //Demonstration page: http://projectmane.localtunnel.me
+			//tunnel: "meddev"
 		});
 	});
 
@@ -30,18 +32,41 @@ var gulp           = require('gulp'),
 
 gulp.task('common-js', function() {
 	return gulp.src([
-		'app/src_js/*.js',
+		'app/src/main.js',
 		])
+  .pipe(webpackStream({
+  				mode: 'development',
+      output: {
+        filename: 'main.js',
+      },
+      module: {
+        rules: [
+          {
+            test: /\.(js)$/,
+            exclude: /(node_modules)/,
+            loader: 'babel-loader',
+            query: {
+              presets: ['env']
+            }
+          }
+        ]
+      },
+      externals: {
+        jquery: 'jQuery'
+      }
+  }))
 	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(uglify())
 	.pipe(gulp.dest('app/js'));
 });
 
-gulp.task('js', function() {
+gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/nouislider/distribute/nouislider.min.js',
-		'app/libs/intense/intense.js'
+		'app/libs/bootstrap/poper.min.js',
+		'app/libs/bootstrap/bootstrap.min.js',
+		'app/js/main.min.js'
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Минимизировать весь js (на выбор)
@@ -61,7 +86,7 @@ gulp.task('sass', function() {
 
 gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
 	gulp.watch(['app/sass/**/*.sass', 'app/blocks/**/*.sass'], ['sass']);
-	gulp.watch(['libs/**/*.js', 'app/src_js/*.js'], ['js']);
+	gulp.watch(['libs/**/*.js', 'app/src/**/*.js'], ['js']);
 	gulp.watch('app/*.html', browserSync.reload);
 });
 

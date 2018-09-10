@@ -9,10 +9,16 @@
   "author": "WebDesign Master",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.1",
+    "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.24.6",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-cache": "^1.0.2",
     "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.1",
@@ -23,9 +29,15 @@
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.1",
     "gulp-util": "^3.0.8",
-    "vinyl-ftp": "^0.6.1"
+    "jquery": "^3.3.1",
+    "vinyl-ftp": "^0.6.1",
+    "webpack": "^4.17.1",
+    "webpack-stream": "^5.1.1"
   },
   "dependencies": {
-    "nouislider": "^11.1.0"
+    "d3": "^5.7.0",
+    "lodash": "^4.17.10",
+    "nouislider": "^11.1.0",
+    "path-ast": "^1.1.0"
   }
 }
