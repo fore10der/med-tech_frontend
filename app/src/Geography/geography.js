@@ -9,9 +9,11 @@ var pointCoef = 1;
 $(function() {
 	if ($(".geography__map").get(0)) {
 
+	/* Place ajax here with PlacePoint function*/
 	PlacePoint("Moscow", "lorem", "ipsum");
 	PlacePoint("PrimorskyKrai","Здарова","test");
 	PlacePoint("Yakutia","Крутой филиал ашана","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non ligula quisorcidaus efficitur. Sed ex elit, ultrices et maximus consequat, porttitor a mauris. Interdum et malesuada");
+	/* end of placing for ajax here*/
 
 	$('[data-toggle="popover"]').popover({
 		offset: 75,
