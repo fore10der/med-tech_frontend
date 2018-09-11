@@ -44,18 +44,18 @@ updateSum();
 
 	function updateValues($order) {
 		var $count = +$order.find(".cart__params-count-value").val();
-		var $price = +$order.find(".cart__params-price_per_item").text().replace(/\s+/g, '');
+		var $price = +$order.find(".cart__params-price_per_item").find(".value").text().replace(/\s+/g, '');
 		var $total = $count*$price;
-		var $totalNode = $order.find(".cart__params-price_total").find("span");
+		var $totalNode = $order.find(".cart__params-price_total").find(".value");
 		$totalNode.text(new Intl.NumberFormat('ru-RU').format($total));
 	}
 
 	function updateSum() {
 		var sum = 0;
 		$(".cart__order").each(function (i,item) {
-			sum+= +$(item).find(".cart__params-price_total").text().replace(/\s+/g, '');
+			sum+= +$(item).find(".cart__params-price_total").find(".value").text().replace(/\s+/g, '');
 		});
-		$(".cart__ordering-orders-value").text(new Intl.NumberFormat('ru-RU').format(sum));
-		$(".cart__ordering-total-value").text(new Intl.NumberFormat('ru-RU').format(sum));
+		$(".cart__ordering-orders-value").find(".value").text(new Intl.NumberFormat('ru-RU').format(sum));
+		$(".cart__ordering-total-value").find(".value").text(new Intl.NumberFormat('ru-RU').format(sum));
 	}
 });
