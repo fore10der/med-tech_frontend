@@ -1,0 +1,97 @@
+{
+  "title": "Эволюция паролей: путеводитель по аутентификации в современном мире",
+  "slug": "otchet-o-hackathon-2025",
+  "image": "/_static/article/gallery/team_work.jpg",
+  "head_type": "normal",
+  "description": "",
+  "category": {
+    "name": "Новости",
+    "color": "#4E47FF"
+  },
+  "content": [
+    {
+      "block": "text",
+      "content": "<h2 dir=\"ltr\"><span><span>Предисловие</span></span></h2>\r\n\r\n<p dir=\"ltr\" style=\"text-align:justify\"><span><span>Однажды, возвращаясь домой из университета и листая ленту, я обнаружил, что основатель нашего сообщества, Борис Цейтлин, ищет front-end разработчика для поездки на Hackathon 2025. На удивление так совпало, что я с одной стороны не являюсь front-end разработчиком (об этом ниже), а с другой стороны &mdash; ни на какой хакатон в конце сессии ехать не собирался. Но, помня о наикрутейшем опыте поездке на </span></span><a href=\"https://lambda-it.ru/posts/hakaton-tehnologii-vozmozhnostej-2017/\" style=\"text-decoration-line:none\"><span ><span ><span >хакатон &quot;Технологии возможностей 2017&quot;</span></span></span></a><span ><span>, я все-таки решил написать Борису, что, мол, если совсем некому поехать, то я готов. И тут все заверте&hellip;</span></span></p>"
+    },
+    {
+      "block": "code",
+      "lang": "python",
+      "content": "import hashlib as hasher\r\n\r\nclass Block:\r\n  def __init__(self, index, timestamp, data, previous_hash):\r\n    self.index = index\r\n    self.timestamp = timestamp\r\n    self.data = data\r\n    self.previous_hash = previous_hash\r\n    self.hash = self.hash_block()\r\n  \r\n  def hash_block(self):\r\n    sha = hasher.sha256()\r\n    sha.update(str(self.index) + \r\n               str(self.timestamp) + \r\n               str(self.data) + \r\n               str(self.previous_hash))\r\n    return sha.hexdigest()"
+    },
+    {
+      "block": "gallery",
+      "images": [
+        {
+          "thumbnail": "/_static/article/gallery/mind_shtorm.jpg",
+          "image": "/_static/article/gallery/mind_shtorm.jpg",
+          "caption": "Мозговой штурм",
+          "size": "small"
+        },
+        {
+          "thumbnail": "/_static/article/gallery/team_work.jpg",
+          "image": "/_static/article/gallery/team_work.jpg",
+          "caption": "Командная работа",
+          "size": "small"
+        },
+        {
+          "thumbnail": "/_static/article/gallery/team_work_2.jpg",
+          "image": "/_static/article/gallery/team_work_2.jpg",
+          "caption": "Командная работа",
+          "size": "wide"
+        }
+      ]
+    },
+    {
+      "block": "carousel",
+      "images": [
+        {
+          "thumbnail": "/_static/article/carousel/1-compressed.jpg",
+          "image": "/_static/article/carousel/1-compressed.jpg",
+          "caption": "Гипер куб"
+        },
+        {
+          "thumbnail": "/_static/article/carousel/5.jpg",
+          "image": "/_static/article/carousel/5.jpg",
+          "caption": "Гипер куб"
+        },
+        {
+          "thumbnail": "/_static/article/carousel/6.jpg",
+          "image": "/_static/article/carousel/6.jpg",
+          "caption": "Гипер куб"
+        }
+      ]
+    },
+    {
+      "block": "quote",
+      "content": "Уверен, что этот хакатон станет решающим событием для нашего проекта и замотивирует множество членов сообщества Lambda на участие в подобных мероприятиях. Это очень круто и весело, поверьте.",
+      "name": "Тимур Майзенберг",
+      "color": "#1875f0"
+    }
+  ],
+  "date": "28 апр 20:56",
+  "views": 321,
+  "likes": 12,
+  "share_count": 21,
+  "comment_count": 12,
+  "author": {
+    "name": "Тимур Майзенберг",
+    "position": "Царь петучей",
+    "image": "/_static/article/avatar/tmayzenberg.jpg"
+  },
+  "shares": [
+    {
+      "name": "vk",
+      "count": 45
+    },
+    {
+      "name": "twitter",
+      "count": 12
+    } 
+  ],
+  "tags": [
+    "Codegasm",
+    "Code",
+    "ML",
+    "meetup"
+  ]
+}
