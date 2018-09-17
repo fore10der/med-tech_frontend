@@ -1,5 +1,9 @@
 .devices
 	margin-top: 22px
+	&_separate
+		.devices__products-row
+			margin-bottom: 0
+			margin-top: 0
 	&__page-nav
 		padding: 72px 0
 		display: flex
@@ -73,13 +77,19 @@
 			background-image: url("../img/icons/select-arrow.png")
 			background-repeat: no-repeat
 			background-position: 95% center
+	&__products
+		&-row
+			margin-bottom: 72px
 	&__product
+		text-decoration: none
 		margin-top: 30px
 		margin-bottom: 8px
 		height: 433px
 		display: flex
 		flex-direction: column
 		justify-content: space-between
+		&:hover
+			text-decoration: none
 		&-icon
 			mask-image: url("../img/icons/cart.svg")
 			background-color: white
@@ -94,6 +104,7 @@
 			background-color: $extraColor
 			padding: 8px 6px 7px 3px
 			display: none
+			cursor: pointer
 		&-preview
 			padding: 20px
 			width: 100%
