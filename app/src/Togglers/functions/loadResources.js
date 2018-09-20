@@ -1,5 +1,6 @@
 import api from '../configs/api'
 import createTemplate from '../configs/templates.js'
+import initGeographyFeatures from "./initGeographyFeatures"
 
  export default function loadResources(container, page_nav, direction = "default"){
 	var request = {};
@@ -22,6 +23,9 @@ import createTemplate from '../configs/templates.js'
 	if (request.page == null)
 		return;
 
+	if (container == "geography__map")
+		container = "offices";
+
 	page_nav.current = request.page
 
 	$.ajax({
@@ -33,9 +37,13 @@ import createTemplate from '../configs/templates.js'
 	 complete: function(data){
 	 								var pageContent = data.responseJSON[request.page-1].results; //правое выражение заменить на data.results
 	 								var htmlToPaste = createTemplate[container](pageContent);
-										$("." + container + " .row-content").html(htmlToPaste);
+	 								if (!(container == "offices" && !$("." + container).get(0)))
+											$("." + container + " .row-content").html(htmlToPaste);
 										page_nav.next = data.responseJSON[request.page-1].next //правое выражение заменить на data.next
 										page_nav.prev = data.responseJSON[request.page-1].previous //правое выражение заменить на data.prev
+										if (container == "offices"){
+         	initGeographyFeatures();
+         	}
          }
 	})
 }

@@ -1,1 +1,2 @@
-import Devices from "./blocks/devices.js"
+import Devices from "./blocks/devices"
+import Geography from "./blocks/geography__map"

@@ -1,0 +1,81 @@
+[  
+   {  
+      "count":4,
+      "next":null,
+      "previous":null,
+      "results":[  
+         {  
+            "image":"http://localhost:3000/img/partners/1.png",
+            "region":"Moscow",
+            "phone":"+74950552896",
+            "email":"simplex.bri@gmail.com",
+            "translations":{  
+               "ru":{  
+                  "title":"Наша команда",
+                  "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+                  "adress":"adadsasdsa"
+               },
+               "en":{  
+                  "title":"Partners",
+                  "description":"jpojop",
+                  "adress":"popoj["
+               }
+            }
+         },
+         {  
+            "image":"http://localhost:3000/img/брехов.png",
+            "region":"Dagestan",
+            "phone":"+77777777",
+            "email":"simplex.bri@gmail.com",
+            "translations":{  
+               "ru":{  
+                  "title":"Чечбня ",
+                  "description":"круто",
+                  "adress":"чечня 97"
+               },
+               "en":{  
+                  "title":"Partners",
+                  "description":"jpojop",
+                  "adress":"popoj["
+               }
+            }
+         },
+         {  
+            "image":"http://bidla.net/uploads/posts/2016-07/thumbs/1469200850_zfm_zxaj8y4.jpg",
+            "region":"TambovOblast",
+            "phone":"+74950532896",
+            "email":"simplex.bri@gmail.com",
+            "translations":{  
+               "ru":{  
+                  "title":"Тамбовский барон у нас в гостях",
+                  "description":"adasdsad",
+                  "adress":"adadsasdsa"
+               },
+               "en":{  
+                  "title":"Partners",
+                  "description":"jpojop",
+                  "adress":"popoj["
+               }
+            }
+         },
+         {  
+            "image":"https://www.meme-arsenal.com/memes/d88bf01732e524bc1879393b1699a15f.jpg",
+            "region":"BelgorodOblast",
+            "phone":"+74950552896",
+            "email":"simplex.bri@gmail.com",
+            "translations":{  
+               "ru":{  
+                  "title":"Че пацаны",
+                  "description":"аниме",
+                  "adress":"аниме"
+               },
+               "en":{  
+                  "title":"Myostimulator for abdominal muscles Slender",
+                  "description":"dadadsd",
+                  "adress":"sadaadasd"
+               }
+            }
+         }
+      ]
+   }
+]
