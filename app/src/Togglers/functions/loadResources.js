@@ -17,9 +17,13 @@ import initGeographyFeatures from "./initGeographyFeatures"
   		request.page = 1; //Убрать на продакшене
     break;
 }
-	if ($(window).width() <= 768)
-		request.page_size = 2;
-	else request.page_size = 8;
+	if (container === "devices"){
+		if ($(window).width() <= 768)
+			request.page_size = 2;
+		else request.page_size = 8;
+	}
+	else
+		request.page_size = 4;
 	if (request.page == null)
 		return;
 
@@ -40,7 +44,7 @@ import initGeographyFeatures from "./initGeographyFeatures"
 	 								if (!(container == "offices" && !$("." + container).get(0)))
 											$("." + container + " .row-content").html(htmlToPaste);
 										page_nav.next = data.responseJSON[request.page-1].next //правое выражение заменить на data.next
-										page_nav.prev = data.responseJSON[request.page-1].previous //правое выражение заменить на data.prev
+										page_nav.prev = data.responseJSON[request.page-1].previous //правое выражение заменить на data.previous
 										if (container == "offices"){
          	initGeographyFeatures();
          	}
