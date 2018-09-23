@@ -20,7 +20,7 @@ var gulp           = require('gulp'),
 		browserSync({
 			server: {
 				baseDir: 'app',
-				index: "devices.html"
+				index: "partners.html"
 			},
 			notify: false,
 			// tunnel: true,
