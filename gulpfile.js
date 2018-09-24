@@ -63,6 +63,11 @@ gulp.task('common-js', function() {
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/jquery/dist/jquery.inputmask.bundle.min.js',
+		'app/libs/inputmask-multi/js/jquery.inputmask-multi.min.js',
+		'app/libs/bootstrap/poper.min.js',
+		'app/libs/bootstrap/bootstrap.min.js',
+		'app/libs/nouislider/distribute/nouislider.min.js',
 		'app/js/main.min.js'
 		])
 	.pipe(concat('scripts.min.js'))
