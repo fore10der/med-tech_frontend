@@ -1,3 +1,5 @@
+import 'bootstrap'
+import 'popper.js'
 import Cart from './Cart/cart.js'
 import Device from './Device/device.js'
 import Yamap from './yaMap/yamap.js'

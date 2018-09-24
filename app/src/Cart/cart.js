@@ -1,3 +1,5 @@
+import $ from "jquery/";
+
 export default $(function() {
 $(".cart__order").each(function (i,item) {
 	updateValues($(item));
