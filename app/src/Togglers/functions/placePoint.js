@@ -4,7 +4,7 @@ export default function (regionName, title, desc) {
 	var region = d3.select("#" + regionName);
 	var regionParams = region.node().getBBox();
 	var pointCoef = 1;
-	if ($(window).width() < 480){
+	if ($(window).width() < 768){
 		pointCoef = 2;
 	}
 	var radius = 15
