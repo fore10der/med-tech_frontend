@@ -22,7 +22,7 @@ import initGeographyFeatures from "./initGeographyFeatures"
 			request.page_size = 2;
 		else request.page_size = 8;
 	}
-	else
+	else if (container != "geography__map")
 		request.page_size = 4;
 	if (request.page == null)
 		return;
