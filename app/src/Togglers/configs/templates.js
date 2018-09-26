@@ -7,6 +7,7 @@ export default {
 	"partners": "../db/devices.json",
 	"team": "../db/devices.json",
 	"offices": (results) => {
+			console.log(results)
 			$("circle").remove();
 			results.reduce(function (html,object) {
 			placePoint(object.region,object.translations.ru.title,object.translations.ru.description)

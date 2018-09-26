@@ -1,6 +1,6 @@
 export default {
-	"devices": "lol", //Готовые девайсы
+	"devices": "../db/devices.json", //Готовые девайсы
 	"partners": "../db/devices.json",
 	"team": "../db/devices.json",
-	"offices": "/ru/api/office/" //Готовая география
+	"offices": "../db/offices.json" //Готовая география
 }

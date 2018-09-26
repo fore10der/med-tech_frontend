@@ -1,81 +1,45 @@
 [  
-   {  
-      "count":4,
-      "next":null,
-      "previous":null,
-      "results":[  
-         {  
-            "image":"http://localhost:3000/img/partners/1.png",
-            "region":"Moscow",
-            "phone":"+74950552896",
-            "email":"simplex.bri@gmail.com",
-            "translations":{  
-               "ru":{  
-                  "title":"Наша команда",
-                  "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
-                  "adress":"adadsasdsa"
-               },
-               "en":{  
-                  "title":"Partners",
-                  "description":"jpojop",
-                  "adress":"popoj["
-               }
+{
+    "count": 2,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "image": "http://193.200.74.46:8000/media/lambda_black_logo.png",
+            "region": "Moscow",
+            "phone": "+78005553535",
+            "email": "example@gmail.com",
+            "translations": {
+                "ru": {
+                    "title": "Пример",
+                    "description": "Пример",
+                    "adress": "Пример"
+                },
+                "en": {
+                    "title": "Example",
+                    "description": "Example",
+                    "adress": "Example"
+                }
             }
-         },
-         {  
-            "image":"http://localhost:3000/img/брехов.png",
-            "region":"Dagestan",
-            "phone":"+77777777",
-            "email":"simplex.bri@gmail.com",
-            "translations":{  
-               "ru":{  
-                  "title":"Чечбня ",
-                  "description":"круто",
-                  "adress":"чечня 97"
-               },
-               "en":{  
-                  "title":"Partners",
-                  "description":"jpojop",
-                  "adress":"popoj["
-               }
+        },
+        {
+            "image": "http://193.200.74.46:8000/media/lambda_black_logo_7DvKnJG.png",
+            "region": "KalugaOblast",
+            "phone": "+78005553535",
+            "email": "example@gmail.com",
+            "translations": {
+                "ru": {
+                    "title": "Пример2",
+                    "description": "Пример2",
+                    "adress": "Пример2"
+                },
+                "en": {
+                    "title": "Example2",
+                    "description": "Example2",
+                    "adress": "Example2"
+                }
             }
-         },
-         {  
-            "image":"http://bidla.net/uploads/posts/2016-07/thumbs/1469200850_zfm_zxaj8y4.jpg",
-            "region":"TambovOblast",
-            "phone":"+74950532896",
-            "email":"simplex.bri@gmail.com",
-            "translations":{  
-               "ru":{  
-                  "title":"Тамбовский барон у нас в гостях",
-                  "description":"adasdsad",
-                  "adress":"adadsasdsa"
-               },
-               "en":{  
-                  "title":"Partners",
-                  "description":"jpojop",
-                  "adress":"popoj["
-               }
-            }
-         },
-         {  
-            "image":"https://www.meme-arsenal.com/memes/d88bf01732e524bc1879393b1699a15f.jpg",
-            "region":"BelgorodOblast",
-            "phone":"+74950552896",
-            "email":"simplex.bri@gmail.com",
-            "translations":{  
-               "ru":{  
-                  "title":"Че пацаны",
-                  "description":"аниме",
-                  "adress":"аниме"
-               },
-               "en":{  
-                  "title":"Myostimulator for abdominal muscles Slender",
-                  "description":"dadadsd",
-                  "adress":"sadaadasd"
-               }
-            }
-         }
-      ]
-   }
+        }
+    ]
+}
 ]
