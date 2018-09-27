@@ -32,8 +32,12 @@ import initGeographyFeatures from "./initGeographyFeatures"
 
 	page_nav.current = request.page
 
+	var lang = window.location.pathname.substr(0,3)
+
+	console.log(lang + api[container]) 
+
 	$.ajax({
-		url: api[container],
+		url: lang + api[container],
 	 dataType:"json",
 	 data: request,
 	 contentType: "application/json",
@@ -41,16 +45,15 @@ import initGeographyFeatures from "./initGeographyFeatures"
 	 complete: function(data){
 	 								console.log(data)
 	 								var pageContent = data.responseJSON[request.page-1].results; //правое выражение заменить на data.results
-	 								var htmlToPaste = createTemplate[container](pageContent);
-	 								if (!(container == "offices" && !$("." + container).get(0))){
+	 								var htmlToPaste = createTemplate[container](pageContent,lang.substr(1,2));
+	 								if (!(container == "offices")){
 	 									console.log(htmlToPaste)
 											$("." + container + " .row-content").html(htmlToPaste);
-	 								}
-										page_nav.next = data.responseJSON[request.page-1].next //правое выражение заменить на data.next
-										page_nav.prev = data.responseJSON[request.page-1].previous //правое выражение заменить на data.previous
-										if (container == "offices"){
-         	initGeographyFeatures();
-         	}
+											page_nav.next = data.responseJSON[request.page-1].next //правое выражение заменить на data.next
+											page_nav.prev = data.responseJSON[request.page-1].previous //правое выражение заменить на data.previous
+										}
+										else
+         		initGeographyFeatures();
          }
 	})
 }

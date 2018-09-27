@@ -18,9 +18,13 @@ var gulp           = require('gulp'),
 
 	gulp.task('browser-sync', function() {
 		browserSync({
+			startPath: '/some/multi/level/path',
 			server: {
 				baseDir: 'app',
-				index: "geography.html"
+				index: "geography.html",
+				routes: {
+      '/some/multi/level/path': '.'
+     }
 			},
 			notify: false,
 			// tunnel: true,
