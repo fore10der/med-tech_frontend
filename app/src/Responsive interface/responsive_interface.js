@@ -15,5 +15,4 @@ export default $(function() {
   $('#nav-header__services-search').toggleClass('nav__services-search--opened');
   $('#nav-header__services-search-block').toggleClass('nav__services-search-block--opened');
  });
-$('#nav-slide_mob-filter').dropdown();
 })
