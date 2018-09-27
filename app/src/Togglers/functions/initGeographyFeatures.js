@@ -4,6 +4,11 @@ var hintWindow = d3.select(".geography__wrapper");
 var $map = $(".geography__map");
 
 export default function InitGeographyFeatures(){
+	if (!$(".geography_type_separate").get(0) && $(".geography").get(0))
+		if ($(window).width() <= 480)
+			d3.select(".geography__map svg").attr("viewBox","-55 0 1900 1000");
+		else
+			d3.select(".geography__map svg").attr("viewBox","-55 0 1700 1000");
 		$('[data-toggle="popover"]').popover({
 		offset: 75,
 		container: 'body',

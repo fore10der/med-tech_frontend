@@ -20,7 +20,7 @@ export default function (regionName, title, desc) {
   default:
   		break;
 	}
-	var point = d3.select(".geography__map")
+	var point = d3.select(".geography__map svg")
 	.append("circle")
 	.attr("r",pointCoef*radius)
 	.attr("data-toggle","popover")

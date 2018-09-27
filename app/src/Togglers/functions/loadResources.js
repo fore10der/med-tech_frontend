@@ -39,10 +39,13 @@ import initGeographyFeatures from "./initGeographyFeatures"
 	 contentType: "application/json",
   cache: false,
 	 complete: function(data){
+	 								console.log(data)
 	 								var pageContent = data.responseJSON[request.page-1].results; //правое выражение заменить на data.results
 	 								var htmlToPaste = createTemplate[container](pageContent);
-	 								if (!(container == "offices" && !$("." + container).get(0)))
+	 								if (!(container == "offices" && !$("." + container).get(0))){
+	 									console.log(htmlToPaste)
 											$("." + container + " .row-content").html(htmlToPaste);
+	 								}
 										page_nav.next = data.responseJSON[request.page-1].next //правое выражение заменить на data.next
 										page_nav.prev = data.responseJSON[request.page-1].previous //правое выражение заменить на data.previous
 										if (container == "offices"){

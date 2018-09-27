@@ -4,9 +4,17 @@
  background-repeat: no-repeat
  background-position: center center
  position: relative
+ height: 800px
  &_type
  	&_separate
  		background-image: none
+ 		height: auto !important
+ 		.geography__map
+ 			position: static
+ 			svg
+ 				height: auto
+ .container
+ 	position: relative
  &__content
  	position: relative
  	z-index: 20
@@ -31,12 +39,12 @@
 			font-weight: 400
 			line-height: 25px
 	&__map
+		position: absolute
 		width: 100%
-		height: auto
-		position: relative
-		top: -180px
-		overflow: visible !important
-		margin-bottom: -140px
+		top: 25px
+		svg
+			width: 100%
+			height: 680px
 		&_separate
 			top: 0
 			margin-bottom: 0
