@@ -36,7 +36,7 @@ import initGeographyFeatures from "./initGeographyFeatures"
 	 dataType:"json",
 	 data: request,
 	 contentType: "application/json",
-  cache: false,
+  	cache: false,
 	 complete: function(data){
 	 								console.log(data)
 	 								var pageContent = data.results;

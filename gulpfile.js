@@ -18,17 +18,13 @@ var gulp           = require('gulp'),
 
 	gulp.task('browser-sync', function() {
 		browserSync({
-			startPath: '/some/multi/level/path',
 			server: {
 				baseDir: 'app',
-				index: "geography.html",
-				routes: {
-      '/some/multi/level/path': '.'
-     }
+				index: "contacts.html"
 			},
 			notify: false,
-			// tunnel: true,
-			//tunnel: "meddev"
+			tunnel: true,
+			tunnel: "meddev"
 		});
 	});
 
